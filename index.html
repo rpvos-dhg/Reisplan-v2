@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1E3328">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Roemenië">
+<title>Roemenië · 11 t/m 24 juni 2026 · foto-editie</title>
+<style>
+:root{
+  --paper:#F7F4EC;
+  --ink:#23291F;
+  --fir:#1E3328;
+  --fir-mid:#2C4636;
+  --fir-soft:#41604D;
+  --cobalt:#2E4E8F;
+  --gold:#A8854B;
+  --gold-soft:#C2A878;
+  --glaze:#EFEADB;
+  --rule:#D9D2C0;
+  --serif:"Iowan Old Style","Palatino Nova","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:-apple-system,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:17px;
+  line-height:1.62;
+}
+.wrap{max-width:680px;margin:0 auto;padding:0 22px}
+
+/* ---------- labels en kleine typografie ---------- */
+.eyebrow{
+  font-family:var(--sans);
+  font-size:11px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:600;
+}
+.meta{
+  font-family:var(--sans);
+  font-size:12.5px;
+  letter-spacing:.04em;
+  color:var(--fir-soft);
+}
+
+/* ---------- cover ---------- */
+.cover{background:var(--fir);color:var(--paper);padding-bottom:54px}
+.cover .art{display:block;width:100%;height:auto}
+.cover .wrap{text-align:center}
+.cover .eyebrow{color:var(--gold-soft);margin-top:34px}
+.cover h1{
+  font-size:46px;
+  line-height:1.05;
+  font-weight:500;
+  letter-spacing:.01em;
+  margin:14px 0 10px;
+}
+.cover .sub{
+  font-style:italic;
+  font-size:18px;
+  color:#CBD4C6;
+  max-width:430px;
+  margin:0 auto;
+}
+.cover .dates{
+  margin-top:26px;
+  font-family:var(--sans);
+  font-size:12px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--gold-soft);
+}
+.hairline{width:54px;height:1px;background:var(--gold);margin:22px auto 0}
+
+/* ---------- passenstatus ---------- */
+.status{background:var(--glaze);border-top:3px solid var(--gold);padding:30px 0 26px}
+.status h2{font-size:21px;font-weight:600;margin:6px 0 16px}
+.status-row{
+  display:flex;
+  gap:12px;
+  padding:11px 0;
+  border-top:1px solid var(--rule);
+  align-items:baseline;
+}
+.status-row:first-of-type{border-top:none}
+.dot{flex:0 0 9px;width:9px;height:9px;border-radius:50%;margin-top:7px;align-self:flex-start}
+.dot.open{background:#3E7A4E}
+.dot.let-op{background:var(--gold)}
+.status-row b{font-weight:600}
+.status-row p{font-size:15.5px;line-height:1.5}
+.status .bron{margin-top:14px;font-style:italic;font-size:13.5px;color:var(--fir-soft)}
+
+/* ---------- inhoud / hoofdstukken ---------- */
+.toc{padding:44px 0 10px}
+.toc h2,.intro h2{font-size:24px;font-weight:600;margin:8px 0 18px}
+.toc ol{list-style:none}
+.toc li{border-top:1px solid var(--rule)}
+.toc li:last-child{border-bottom:1px solid var(--rule)}
+.toc a{
+  display:flex;
+  gap:14px;
+  align-items:baseline;
+  padding:10px 2px;
+  text-decoration:none;
+  color:var(--ink);
+}
+.toc .d{font-family:var(--sans);font-size:12px;letter-spacing:.08em;color:var(--gold);flex:0 0 64px;font-weight:600}
+.toc .t{font-size:16.5px}
+.toc .r{margin-left:auto;font-family:var(--sans);font-size:12px;color:var(--fir-soft);white-space:nowrap}
+
+.intro{padding:26px 0 8px}
+.intro p{margin-bottom:14px}
+
+/* ---------- dagsecties ---------- */
+.day{padding:50px 0 8px}
+.day-head{border-top:3px double var(--gold);padding-top:22px}
+.daynum{
+  font-size:54px;
+  line-height:1;
+  color:var(--gold);
+  font-weight:500;
+  font-variant-numeric:lining-nums;
+}
+.day-head .eyebrow{display:block;margin:8px 0 4px;color:var(--fir-soft)}
+.day h2{font-size:30px;line-height:1.15;font-weight:600;margin:2px 0 12px}
+.factstrip{
+  font-family:var(--sans);
+  font-size:12.5px;
+  letter-spacing:.05em;
+  color:var(--fir-soft);
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  padding:9px 2px;
+  margin:6px 0 4px;
+}
+.factstrip b{color:var(--ink);font-weight:600}
+.daglijn{display:block;width:100%;height:auto;margin:14px 0 6px}
+.day h3{font-size:20px;font-weight:600;margin:26px 0 8px}
+.day p{margin-bottom:13px}
+.day p:last-child{margin-bottom:0}
+.tijd{font-family:var(--sans);font-size:12px;letter-spacing:.1em;color:var(--gold);font-weight:600;text-transform:uppercase}
+
+/* ---------- belvedère ---------- */
+.vista{
+  border-left:3px solid var(--cobalt);
+  background:linear-gradient(90deg,rgba(46,78,143,.07),rgba(46,78,143,0));
+  padding:14px 16px 13px 18px;
+  margin:20px 0;
+}
+.vista .lbl{
+  font-family:var(--sans);
+  font-size:10.5px;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--cobalt);
+  font-weight:700;
+}
+.vista .lbl::before{content:"◆";margin-right:8px;font-size:9px}
+.vista h4{font-size:17.5px;font-weight:600;margin:5px 0 4px}
+.vista p{font-size:15.5px;line-height:1.55;margin:0}
+
+/* ---------- praktisch ---------- */
+.prak{
+  background:var(--glaze);
+  border-top:1px solid var(--gold-soft);
+  border-bottom:1px solid var(--gold-soft);
+  padding:15px 18px 14px;
+  margin:22px 0;
+}
+.prak .lbl{
+  font-family:var(--sans);
+  font-size:10.5px;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:700;
+  display:block;
+  margin-bottom:7px;
+}
+.prak ul{list-style:none}
+.prak li{
+  font-size:15.5px;
+  line-height:1.5;
+  padding:5px 0 5px 16px;
+  position:relative;
+}
+.prak li::before{content:"·";position:absolute;left:2px;color:var(--gold);font-weight:700}
+
+/* ---------- bijlage ---------- */
+.annex{background:var(--fir);color:#E9EAE2;padding:46px 0 60px;margin-top:54px}
+.annex .eyebrow{color:var(--gold-soft)}
+.annex h2{font-size:27px;font-weight:600;margin:8px 0 6px;color:var(--paper)}
+.annex h3{font-size:19px;font-weight:600;margin:30px 0 10px;color:var(--gold-soft)}
+.annex p{margin-bottom:12px;font-size:16px}
+.annex ul{list-style:none}
+.annex li{padding:5px 0 5px 16px;position:relative;font-size:15.5px;line-height:1.55}
+.annex li::before{content:"·";position:absolute;left:2px;color:var(--gold-soft);font-weight:700}
+.annex table{width:100%;border-collapse:collapse;margin:10px 0 6px;font-size:14.5px}
+.annex th{
+  font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gold-soft);text-align:left;padding:7px 10px 7px 0;border-bottom:1px solid #3C5648;font-weight:600;
+}
+.annex td{padding:8px 10px 8px 0;border-bottom:1px solid #314A3D;vertical-align:top}
+.footer{
+  text-align:center;
+  padding:30px 0 8px;
+  font-family:var(--sans);
+  font-size:11px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:#7E927F;
+}
+
+@media print{
+  .day{page-break-before:always}
+  .cover,.annex{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+@media (min-width:560px){
+  .cover h1{font-size:56px}
+}
+
+/* ---------- foto-editie ---------- */
+.photo{margin:18px 0 8px}
+.photo img{display:block;width:100%;height:auto;border:1px solid var(--rule)}
+.photo figcaption{font-family:var(--sans);font-size:11.5px;letter-spacing:.04em;color:var(--fir-soft);padding:7px 2px 0}
+.photo figcaption em{font-style:normal;color:var(--gold)}
+.photo .ph{display:none}
+.photo.img-failed img{display:none}
+.photo.img-failed{background:var(--glaze);border:1px solid var(--rule);text-align:center;padding:42px 16px 38px}
+.photo.img-failed .ph{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--fir-soft)}
+.photo.img-failed .ph::before{content:"\25C6";display:block;color:var(--gold);margin-bottom:8px;font-size:10px}
+.photo.img-failed figcaption{display:none}
+.cover-photo{margin:0}
+.cover-photo img{border:none}
+.cover-photo figcaption,.cover-photo .ph{display:none}
+.cover .art{display:none}
+.cover.noimg .art{display:block}
+.cover.noimg .cover-photo{display:none}
+#cachechip{margin-top:6px;font-family:var(--sans);font-size:12px;font-style:normal;color:var(--fir-soft)}
+</style>
+</head>
+<body>
+
+<!-- ================= COVER ================= -->
+<header class="cover">
+  <figure class="photo cover-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Wide_view_over_the_northern_Transfagarasan.jpg/1200px-Wide_view_over_the_northern_Transfagarasan.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/c/cd/Wide_view_over_the_northern_Transfagarasan.jpg" data-cache="cover" alt="De serpentines aan de noordzijde van de Transfăgărășan" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{this.closest('figure').classList.add('img-failed');var h=this.closest('header');if(h)h.classList.add('noimg');}"><span class="ph">Transfăgărășan</span><figcaption> &middot; <em>Wikimedia Commons</em></figcaption></figure>
+  <svg class="art" viewBox="0 0 640 330" role="img" aria-label="Karpatenlandschap met serpentineweg">
+    <rect width="640" height="330" fill="#1E3328"/>
+    <circle cx="478" cy="92" r="40" fill="none" stroke="#A8854B" stroke-width="1.6"/>
+    <circle cx="478" cy="92" r="27" fill="#A8854B" opacity="0.92"/>
+    <path d="M0,178 L70,130 L128,168 L196,108 L258,160 L330,96 L398,154 L470,118 L538,158 L600,126 L640,150 L640,330 L0,330 Z" fill="#2C4636"/>
+    <path d="M0,226 L86,182 L162,216 L246,170 L334,212 L420,176 L506,210 L584,182 L640,204 L640,330 L0,330 Z" fill="#36523F"/>
+    <path d="M0,272 L110,238 L228,266 L352,234 L468,264 L580,240 L640,256 L640,330 L0,330 Z" fill="#41604D"/>
+    <path d="M-10,322 C150,318 240,300 200,286 C160,272 320,268 380,258 C440,248 350,242 410,234 C470,226 560,224 648,218"
+      fill="none" stroke="#F7F4EC" stroke-width="6" stroke-linecap="round" opacity="0.93"/>
+    <path d="M-10,322 C150,318 240,300 200,286 C160,272 320,268 380,258 C440,248 350,242 410,234 C470,226 560,224 648,218"
+      fill="none" stroke="#A8854B" stroke-width="1.1" stroke-dasharray="7 8"/>
+  </svg>
+  <div class="wrap">
+    <span class="eyebrow">Privéreisgids · foto-editie</span>
+    <h1>Roemenië</h1>
+    <p class="sub">Door Transsylvanië, over twee bergpassen, langs de kloosters van Oltenië, naar Boekarest.</p>
+    <div class="hairline"></div>
+    <p class="dates">11 t/m 24 juni 2026 · 14 dagen · ca. 1.560 km</p>
+  </div>
+</header>
+
+<!-- ================= PASSENSTATUS ================= -->
+<section class="status" id="status">
+  <div class="wrap">
+    <span class="eyebrow">Actuele stand</span>
+    <h2>De bergpassen, bijgewerkt op vrijdag 12 juni 2026</h2>
+    <div class="status-row">
+      <span class="dot open"></span>
+      <p><b>Transfăgărășan (DN7C): open.</b> Het bergdeel tussen Piscul Negru en Bâlea Cascadă is vandaag, 12 juni, na acht maanden heropend. Rijden mag dagelijks tussen 07:00 en 21:00. Bij slecht weer kan de weg tijdelijk dicht.</p>
+    </div>
+    <div class="status-row">
+      <span class="dot open"></span>
+      <p><b>Transalpina (DN67C): open.</b> Het bergdeel Rânca tot Curpăt is sinds 29 mei open. Tot en met 30 juni rijd je tussen 09:00 en 20:00, maximaal 30 km/u, alleen voertuigen tot 3,5 ton.</p>
+    </div>
+    <div class="status-row">
+      <span class="dot let-op"></span>
+      <p><b>Let op bij de Vidraru-dam.</b> Voor werkzaamheden aan de stuwdam geldt sinds 17 februari een afsluiting van het wegvak bij de dam (km 61+500 tot 61+750). In het weekend is dat vak dicht van 08:00 tot 11:00. Of dit op 21 juni nog geldt is niet bevestigd: check het de avond ervoor en zie het aangepaste schema bij dag 21.</p>
+    </div>
+    <p class="bron">Bronnen: CNAIR en DRDP Brașov en Craiova, via Roemeense pers van 28 mei tot 12 juni 2026. Controleer onderweg de Facebookpagina's van CNAIR (Cristian Pistol) en DRDP Craiova.</p>
+    <p class="bron"><b>Offline gebruiken:</b> open deze site één keer met internet en zet hem daarna via Delen, Zet op beginscherm, op je iPhone. De hele gids, inclusief foto’s, wordt automatisch opgeslagen en werkt vervolgens zonder bereik.</p>
+    <p class="bron" id="cachechip">Offline-opslag wordt gecontroleerd zodra de pagina geladen is.</p>
+  </div>
+</section>
+
+<!-- ================= INHOUD ================= -->
+<nav class="toc">
+  <div class="wrap">
+    <span class="eyebrow">Reisoverzicht</span>
+    <h2>Veertien dagen, dag voor dag</h2>
+    <ol>
+      <li><a href="#d11"><span class="d">Do 11</span><span class="t">Prejmer en Râșnov</span><span class="r">Brașov</span></a></li>
+      <li><a href="#d12"><span class="d">Vr 12</span><span class="t">Bran en Piatra Craiului</span><span class="r">Brașov</span></a></li>
+      <li><a href="#d13"><span class="d">Za 13</span><span class="t">Viscri, door naar Sighișoara</span><span class="r">Sighișoara</span></a></li>
+      <li><a href="#d14"><span class="d">Zo 14</span><span class="t">Sighișoara, de citadel</span><span class="r">Sighișoara</span></a></li>
+      <li><a href="#d15"><span class="d">Ma 15</span><span class="t">Biertan, door naar Cluj</span><span class="r">Cluj-Napoca</span></a></li>
+      <li><a href="#d16"><span class="d">Di 16</span><span class="t">Zoutmijn Turda en Alba Iulia</span><span class="r">Alba Iulia</span></a></li>
+      <li><a href="#d17"><span class="d">Wo 17</span><span class="t">Sarmizegetusa en Corvin</span><span class="r">Sibiu</span></a></li>
+      <li><a href="#d18"><span class="d">Do 18</span><span class="t">Sibiu, boven- en benedenstad</span><span class="r">Sibiu</span></a></li>
+      <li><a href="#d19"><span class="d">Vr 19</span><span class="t">De Transalpina, volledige oversteek</span><span class="r">Horezu</span></a></li>
+      <li><a href="#d20"><span class="d">Za 20</span><span class="t">Kloosters van Oltenië, Olt-vallei</span><span class="r">Curtea de Argeș</span></a></li>
+      <li><a href="#d21"><span class="d">Zo 21</span><span class="t">De Transfăgărășan</span><span class="r">Curtea de Argeș</span></a></li>
+      <li><a href="#d22"><span class="d">Ma 22</span><span class="t">Mogoșoaia, aankomst Boekarest</span><span class="r">Boekarest</span></a></li>
+      <li><a href="#d23"><span class="d">Di 23</span><span class="t">Boekarest, het Parlementspaleis</span><span class="r">Boekarest</span></a></li>
+      <li><a href="#d24"><span class="d">Wo 24</span><span class="t">Naar huis, KL1376</span><span class="r">Amsterdam</span></a></li>
+    </ol>
+  </div>
+</nav>
+
+<section class="intro">
+  <div class="wrap">
+    <p>Deze gids leest als een dagboek dat vooruit is geschreven. Elke dag opent met de route in één lijn, vertelt daarna waarom een plek de moeite waard is, en sluit af met de praktische punten die je onderweg nodig hebt. De blauwe blokken markeren de belvedères: plekken waar je stopt om te kijken. De beige blokken bevatten alles wat met parkeren, kassa's, kleding en timing te maken heeft.</p>
+    <p>Vaste afspraken die door de hele reis lopen: KLM bellen over retourvlucht KL1376 op 16, 17 of 18 juni op een rustig moment, en deze week nog online tickets reserveren voor het Parlementspaleis op 23 juni. Beide staan in de bijlage achterin nog eens uitgewerkt.</p>
+  </div>
+</section>
+
+<!-- ================= DAG 11 ================= -->
+<section class="day" id="d11">
+  <div class="wrap">
+    <div class="day-head">
+      <div class="daynum">11</div>
+      <span class="eyebrow">Donderdag · juni</span>
+      <h2>Prejmer en Râșnov, de burchten van het Burzenland</h2>
+      <p class="factstrip"><b>Route</b> rond Brașov · ca. 60 km · <b>overnachting</b> Brașov</p>
+    </div>
+    <svg class="daglijn" viewBox="0 0 640 76" role="img" aria-label="Daglijn: Brașov, Prejmer, Râșnov, Tâmpa, Brașov">
+      <line x1="20" y1="42" x2="620" y2="42" stroke="#41604D" stroke-width="1.5"/>
+      <circle cx="20" cy="42" r="4.5" fill="#23291F"/>
+      <circle cx="180" cy="42" r="4" fill="#2E4E8F"/>
+      <circle cx="400" cy="42" r="4" fill="#2E4E8F"/>
+      <rect x="-3.5" y="-3.5" width="7" height="7" fill="#A8854B" transform="translate(545,42) rotate(45)"/>
+      <circle cx="620" cy="42" r="4.5" fill="#23291F"/>
+      <g font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="11" fill="#23291F">
+        <text x="20" y="26">Brașov</text>
+        <text x="180" y="26" text-anchor="middle">Prejmer</text>
+        <text x="400" y="26" text-anchor="middle">Râșnov</text>
+        <text x="620" y="26" text-anchor="end">Brașov</text>
+        <text x="545" y="62" text-anchor="middle" fill="#41604D">Tâmpa, 940 m</text>
+      </g>
+    </svg>
+    <figure class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Fortified_church_in_Prejmer,_Bra%C8%99ov_01.jpg/1200px-Fortified_church_in_Prejmer,_Bra%C8%99ov_01.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/e/ee/Fortified_church_in_Prejmer,_Bra%C8%99ov_01.jpg" data-cache="prejmer" alt="De ringmuur van Prejmer" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{this.closest('figure').classList.add('img-failed');var h=this.closest('header');if(h)h.classList.add('noimg');}"><span class="ph">Prejmer</span><figcaption>De kerkburcht van Prejmer, met de 12 meter hoge ringmuur &middot; <em>Wikimedia Commons</em></figcaption></figure>
+    <h3><span class="tijd">Tot ca. 14:00</span><br>Prejmer, de zwaarst verdedigde kerk van Transsylvanië</h3>
+    <p>De versterkte kerk van Prejmer (Tartlau) is de meest weerbare van alle Saksische kerkburchten en staat daarom op de UNESCO-lijst. De kerk zelf dateert uit het begin van de 13e eeuw, gesticht in de jaren dat de Duitse Orde dit grensgebied bewaakte. Wat je hier vooral komt zien is de ringmuur: 12 meter hoog, 3 tot 4 meter dik, met aan de binnenzijde ruim 270 kamertjes in vier verdiepingen. Elk gezin uit het dorp had bij een belegering zijn eigen genummerde kamer, voorraad inbegrepen.</p>
+    <p>Loop de houten galerijen rond en zoek het zogenoemde dodenorgel: een rek waarin meerdere geweren tegelijk door de schietgaten konden vuren. Reken op 1 tot 1,5 uur. De kerk sluit om 17:00, dus je zit ruim in je tijd.</p>
+    <h3><span class="tijd">15:00 tot 17:00</span><br>Râșnov, de burcht van de boeren</h3>
+    <p>Terug richting Brașov ligt Râșnov, 25 minuten rijden. Waar Bran een adellijk kasteel is, is Râșnov een boerenburcht: gebouwd en verdedigd door de dorpelingen zelf, vanaf de 13e eeuw. De vesting ligt op een kalksteenheuvel boven het stadje en is bereikbaar met een pendelbusje of te voet, een klim van 20 tot 25 minuten. Het verhaal gaat dat de waterput op de binnenplaats werd uitgehakt door twee Turkse gevangenen, in ruil voor hun vrijheid. Volgens de legende deden ze er 17 jaar over.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère</span>
+      <h4>De muren van Râșnov, over de Burzenland-vlakte</h4>
+      <p>Vanaf de wallen kijk je over de hele vlakte tussen de Karpatenketens. In één blik begrijp je waarom hier zo veel burchten staan: dit was eeuwenlang de invalsroute van Walachije naar Transsylvanië. Het beste licht valt aan het einde van de middag.</p>
+    </div>
+    <h3><span class="tijd">Avond</span><br>Brașov vanaf hoogte</h3>
+    <p>Heb je nog energie, dan brengt de Tâmpa-kabelbaan (Telecabina, in juni tot ca. 18:00, controleer ter plekke) je in drie minuten naar 940 meter, met het beste overzicht van de oude stad die je gisteren verkende. Anders: eten in de buurt van Piața Sfatului.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère · alternatief</span>
+      <h4>Belvedere-punt aan de Drumul Poienii</h4>
+      <p>Rijd je liever dan dat je zweeft: langs de weg naar Poiana Brașov ligt een parkeerhaven met vrij zicht op de daken, de Zwarte Kerk en de witte letters op de Tâmpa. Vijf minuten vanaf het centrum, geen kaartje nodig, mooi bij zonsondergang.</p>
+    </div>
+    <div class="prak">
+      <span class="lbl">Praktisch</span>
+      <ul>
+        <li>Prejmer sluit om 17:00, kassa eerder. Combineer entree met de kleine expositie in de muurkamers.</li>
+        <li>Pendelbusje Râșnov: klein bedrag, contant is handig. Te voet is de klim goed te doen op gympen.</li>
+        <li>Avondeten: de straten direct achter Piața Sfatului zijn rustiger en beter geprijsd dan het plein zelf.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAG 12 ================= -->
+<section class="day" id="d12">
+  <div class="wrap">
+    <div class="day-head">
+      <div class="daynum">12</div>
+      <span class="eyebrow">Vrijdag · juni</span>
+      <h2>Bran en de kalkstenen kam van Piatra Craiului</h2>
+      <p class="factstrip"><b>Route</b> rond Brașov · ca. 80 km · <b>overnachting</b> Brașov</p>
+    </div>
+    <svg class="daglijn" viewBox="0 0 640 76" role="img" aria-label="Daglijn: Brașov, Bran, Zărnești-kloof, Brașov">
+      <line x1="20" y1="42" x2="620" y2="42" stroke="#41604D" stroke-width="1.5"/>
+      <circle cx="20" cy="42" r="4.5" fill="#23291F"/>
+      <circle cx="190" cy="42" r="4" fill="#2E4E8F"/>
+      <rect x="-3.5" y="-3.5" width="7" height="7" fill="#A8854B" transform="translate(300,42) rotate(45)"/>
+      <circle cx="450" cy="42" r="4" fill="#2E4E8F"/>
+      <circle cx="620" cy="42" r="4.5" fill="#23291F"/>
+      <g font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="11" fill="#23291F">
+        <text x="20" y="26">Brașov</text>
+        <text x="190" y="26" text-anchor="middle">Bran</text>
+        <text x="450" y="26" text-anchor="middle">Zărnești-kloof</text>
+        <text x="620" y="26" text-anchor="end">Brașov</text>
+        <text x="300" y="62" text-anchor="middle" fill="#41604D">Fundata (optie)</text>
+      </g>
+    </svg>
+    <figure class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Castelul_Bran_-_2018.jpg/1200px-Castelul_Bran_-_2018.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/e/e6/Castelul_Bran_-_2018.jpg" data-cache="bran" alt="Kasteel Bran op de rots" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{this.closest('figure').classList.add('img-failed');var h=this.closest('header');if(h)h.classList.add('noimg');}"><span class="ph">Bran</span><figcaption>Bran, tolpost op de pas tussen Transsylvanië en Walachije &middot; <em>Wikimedia Commons</em></figcaption></figure>
+    <h3><span class="tijd">09:00, bij de deur</span><br>Bran, het kasteel van koningin Maria</h3>
+    <p>Bran is om twee redenen druk: de Dracula-associatie en de ligging aan de doorgaande weg. Beide hebben weinig met de werkelijkheid te maken. Het kasteel werd tussen 1377 en 1388 gebouwd door de Saksen van Brașov als tolpost en grensfort op de pas tussen Transsylvanië en Walachije. Vlad Țepeș, de historische inspiratie voor Dracula, heeft er hooguit kort verbleven. Bram Stoker is nooit in Roemenië geweest.</p>
+    <p>Interessanter is de twintigste-eeuwse laag. In 1920 schonk Brașov het kasteel aan koningin Maria, die er haar favoriete zomerverblijf van maakte. Het interieur dat je ziet is grotendeels haar smaak: art-nouveau-achtig, intiem, met smalle trappen en verborgen gangen. Reken op 1,5 tot 2 uur inclusief de rij bij de kassa. Koop tickets vooraf online als dat nog kan.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère · optie</span>
+      <h4>Fundata, het hoogste dorp van het land</h4>
+      <p>Heb je tijd over na Bran: rijd 20 minuten verder de pas op naar Fundata, op ruim 1.300 meter. Vanaf het plateau kijk je links op de Bucegi en rechts op de volledige kam van Piatra Craiului. Een korte omweg, daarna terug naar Zărnești via Moieciu.</p>
+    </div>
+    <h3><span class="tijd">Middag</span><br>De kloof van Zărnești, poort naar Piatra Craiului</h3>
+    <p>Twintig minuten rijden naar Zărnești, dan een onverharde maar goed berijdbare weg naar de ingang van de Prăpăstiile Zărneștiului. Dit is de toegangspoort tot Nationaal Park Piatra Craiului, een kalksteenkam van 25 kilometer die als een mes uit het landschap steekt.</p>
+    <p>De kloofwandeling zelf is vlak en breed: je loopt tussen wanden van 100 tot 200 meter hoog. Heen en terug zo ver als je wilt, 1,5 tot 2,5 uur is een goede middag. Met wat geluk zie je gemzen hoog op de richels. Dit is ook bruine-berenland: blijf op het pad en laat geen eten slingeren.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère</span>
+      <h4>De eerste kilometer van de kloof</h4>
+      <p>Het indrukwekkendste stuk komt meteen: daar staan de wanden het dichtst op elkaar en hoor je alleen de beek en de kauwen. Kijk omhoog bij de smalste passage, daar hangen klimmers vaak in de wand.</p>
+    </div>
+    <h3><span class="tijd">Avond</span><br>Laatste avond Brașov</h3>
+    <p>Strada Sforii, met 1,1 meter een van de smalste straatjes van Europa, ligt op vijf minuten van het centrale plein als je hem eerder hebt gemist.</p>
+    <div class="prak">
+      <span class="lbl">Praktisch</span>
+      <ul>
+        <li>Parkeren Bran: de officiële terreinen vullen snel. De particuliere veldjes iets verderop langs de weg zijn prima en vaak goedkoper. Contant geld meenemen.</li>
+        <li>Kloof: stevige schoenen, water mee, telefoon geladen. Bereik valt soms weg tussen de wanden.</li>
+        <li>Beren: niet voeren, niet uitstappen voor foto's, eten uit het zicht in de auto.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAG 13 ================= -->
+<section class="day" id="d13">
+  <div class="wrap">
+    <div class="day-head">
+      <div class="daynum">13</div>
+      <span class="eyebrow">Zaterdag · juni</span>
+      <h2>Viscri, en in de avond de citadel van Sighișoara</h2>
+      <p class="factstrip"><b>Route</b> Brașov naar Sighișoara · ca. 130 km · <b>overnachting</b> Sighișoara</p>
+    </div>
+    <svg class="daglijn" viewBox="0 0 640 76" role="img" aria-label="Daglijn: Brașov, Rupea, Viscri, Sighișoara">
+      <line x1="20" y1="42" x2="620" y2="42" stroke="#41604D" stroke-width="1.5"/>
+      <circle cx="20" cy="42" r="4.5" fill="#23291F"/>
+      <rect x="-3.5" y="-3.5" width="7" height="7" fill="#A8854B" transform="translate(190,42) rotate(45)"/>
+      <circle cx="340" cy="42" r="4" fill="#2E4E8F"/>
+      <circle cx="620" cy="42" r="4.5" fill="#23291F"/>
+      <g font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="11" fill="#23291F">
+        <text x="20" y="26">Brașov</text>
+        <text x="340" y="26" text-anchor="middle">Viscri</text>
+        <text x="620" y="26" text-anchor="end">Sighișoara</text>
+        <text x="190" y="62" text-anchor="middle" fill="#41604D">Rupea, fotostop</text>
+      </g>
+    </svg>
+    <figure class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Viscri_fortified_church.jpg/1200px-Viscri_fortified_church.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/6/6c/Viscri_fortified_church.jpg" data-cache="viscri" alt="De witgekalkte kerkburcht van Viscri" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{this.closest('figure').classList.add('img-failed');var h=this.closest('header');if(h)h.classList.add('noimg');}"><span class="ph">Viscri</span><figcaption>De kerkburcht van Viscri, met een kern uit de 12e eeuw &middot; <em>Wikimedia Commons</em></figcaption></figure>
+    <h3><span class="tijd">Ca. 09:00</span><br>Vertrek noordwaarts, met Rupea als fotostop</h3>
+    <p>Via de E60 het Saksische land in. Na ongeveer 50 minuten doemt de burcht van Rupea op: een spiraalvormige vesting op een basaltrots, goed zichtbaar vanaf de weg. Binnen kijken kan (een uur), maar alleen fotograferen vanaf de parkeerplaats is ook een prima keuze als je tijd wilt bewaren voor Viscri.</p>
+    <h3><span class="tijd">10:30 tot 13:30</span><br>Viscri, het dorp met één straat</h3>
+    <p>De laatste 7 kilometer naar Viscri zijn deels onverhard. Bij droog weer geen probleem, bij regen rustig aan. Viscri (Deutsch-Weißkirch) is het bekendste Saksische dorp van Transsylvanië, mede doordat koning Charles III er sinds 2006 een huis bezit en zich inzet voor het behoud.</p>
+    <p>De witgekalkte kerkburcht op de heuvel (UNESCO) heeft een kern uit de 12e eeuw, gebouwd door de Szeklers nog vóór de Saksische kolonisatie. Dat maakt hem anders dan alle andere kerken op deze route. Lunch in het dorp: meerdere huizen serveren huisgemaakte maaltijden aan de poort, eenvoudig en goed.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère</span>
+      <h4>De kerktoren van Viscri</h4>
+      <p>Klim de toren op voor het overzicht: één lange straat, ganzen op de weg, huizen in pasteltinten met gesloten poorten. Zo zagen honderden dorpen hier er tot 1990 uit, voordat de Saksen massaal naar Duitsland vertrokken.</p>
+    </div>
+    <h3><span class="tijd">Middag en avond</span><br>Naar Sighișoara</h3>
+    <p>Ruim een uur rijden. Inchecken, daarna een eerste verkenning. De citadel is in de avond op zijn mooist: het dagpubliek is weg en de lantaarns gaan aan. Bewaar de bezienswaardigheden voor morgen en loop nu alleen maar rond.</p>
+    <div class="prak">
+      <span class="lbl">Praktisch</span>
+      <ul>
+        <li>Lunch in Viscri: contant geld meenemen, niet elk huis heeft pin.</li>
+        <li>De onverharde kilometers: rustig rijden scheelt steenslag, en je auto blijft heel voor de bergpassen volgende week.</li>
+        <li>Parkeren Sighișoara: buiten de citadel, je hotel weet de dichtstbijzijnde plek. Binnen de muren is het autoluw.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAG 14 ================= -->
+<section class="day" id="d14">
+  <div class="wrap">
+    <div class="day-head">
+      <div class="daynum">14</div>
+      <span class="eyebrow">Zondag · juni</span>
+      <h2>Sighișoara, een bewoonde middeleeuwse citadel</h2>
+      <p class="factstrip"><b>Geen autodag</b> · alles te voet · <b>overnachting</b> Sighișoara</p>
+    </div>
+    <svg class="daglijn" viewBox="0 0 640 76" role="img" aria-label="Daglijn: wandeling door de citadel">
+      <line x1="20" y1="42" x2="620" y2="42" stroke="#41604D" stroke-width="1.5"/>
+      <circle cx="20" cy="42" r="4.5" fill="#23291F"/>
+      <rect x="-3.5" y="-3.5" width="7" height="7" fill="#A8854B" transform="translate(140,42) rotate(45)"/>
+      <circle cx="300" cy="42" r="4" fill="#2E4E8F"/>
+      <circle cx="450" cy="42" r="4" fill="#2E4E8F"/>
+      <rect x="-3.5" y="-3.5" width="7" height="7" fill="#A8854B" transform="translate(580,42) rotate(45)"/>
+      <g font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="11" fill="#23291F">
+        <text x="20" y="26">Citadel</text>
+        <text x="300" y="26" text-anchor="middle">Vlad-huis</text>
+        <text x="450" y="26" text-anchor="middle">Scholierentrap</text>
+        <text x="140" y="62" text-anchor="middle" fill="#41604D">Klokkentoren</text>
+        <text x="580" y="62" text-anchor="middle" fill="#41604D">Bergkerk</text>
+      </g>
+    </svg>
+    <figure class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Clock_Tower,_Stundturm,_Sighisoara_(Sch%C3%A4%C3%9Fburg),_Romania,_Rum%C3%A4nien20120922.jpg/1200px-Clock_Tower,_Stundturm,_Sighisoara_(Sch%C3%A4%C3%9Fburg),_Romania,_Rum%C3%A4nien20120922.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/6/6d/Clock_Tower,_Stundturm,_Sighisoara_(Sch%C3%A4%C3%9Fburg),_Romania,_Rum%C3%A4nien20120922.jpg" data-cache="sighisoara" alt="De Klokkentoren van Sighișoara" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{this.closest('figure').classList.add('img-failed');var h=this.closest('header');if(h)h.classList.add('noimg');}"><span class="ph">Sighișoara</span><figcaption>De Turnul cu Ceas, 64 meter, het symbool van de citadel &middot; <em>Wikimedia Commons</em></figcaption></figure>
+    <p>Sighișoara (Schäßburg) is een van de weinige nog bewoonde middeleeuwse citadellen van Europa, en als geheel UNESCO-werelderfgoed. De Saksen bouwden de stad vanaf de 12e eeuw uit tot een van de belangrijkste handels- en ambachtscentra van Transsylvanië. Elk gilde onderhield zijn eigen verdedigingstoren; negen daarvan staan nog overeind.</p>
+    <h3><span class="tijd">Ochtend</span><br>De Klokkentoren en het huis van Vlad</h3>
+    <p>Begin bij de Turnul cu Ceas (09:00 tot 17:30), het 64 meter hoge symbool van de stad, met een figurenuurwerk uit de 17e eeuw. Het museum binnen is bescheiden; de klim is het doel. Ernaast staat het geboortehuis van Vlad Țepeș. Vlad III werd hier rond 1431 geboren, toen zijn vader Vlad Dracul in ballingschap in de stad woonde. Het huis is nu een restaurant met een klein, toeristisch kamertje. Van buiten bekijken volstaat.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère</span>
+      <h4>Het rondgaande balkon van de Klokkentoren</h4>
+      <p>Bovenin loop je helemaal rond, met de daken van de citadel aan de ene kant en de benedenstad aan de andere. De houten wijzers geven de windrichtingen en afstanden naar wereldsteden aan. Ga vroeg, dan heb je het balkon vrijwel voor jezelf.</p>
+    </div>
+    <h3><span class="tijd">Late ochtend</span><br>Via de Scholierentrap omhoog</h3>
+    <p>De Scara Școlarilor telt 175 overdekte houten treden uit 1654, gebouwd zodat kinderen droog naar de school op de heuvel konden. Boven staat de Bergkerk (Biserica din Deal), de belangrijkste gotische kerk van de stad.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère</span>
+      <h4>Het terras bij de Bergkerk en het Duitse kerkhof</h4>
+      <p>Naast de kerk ligt het Duitse kerkhof onder hoge bomen, met grafstenen vol Saksische familienamen. Vanaf de rand van het kerkterras kijk je over de torens van de citadel heen het dal in. Een van de stilste plekken van de reis.</p>
+    </div>
+    <h3><span class="tijd">Middag</span><br>Niets moeten</h3>
+    <p>Koffie op Piața Cetății, het hellende centrale plein, en dwalen door de zijstraatjes. Meer hoeft deze dag niet. Het is bovendien zondag: in de ochtend klinken de kerkklokken over de heuvel.</p>
+    <div class="prak">
+      <span class="lbl">Praktisch</span>
+      <ul>
+        <li>Klokkentoren: kaartje aan de deur, het balkon is smal, ga voor 10:00 of na 16:00.</li>
+        <li>Bergkerk: kleine entree, binnen koel. De trap is overdekt, dus ook bij regen een goede dag.</li>
+        <li>Was- en rustdag: halverwege de reis is dit het moment om de tas opnieuw in te delen voor de bergweek.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAG 15 ================= -->
+<section class="day" id="d15">
+  <div class="wrap">
+    <div class="day-head">
+      <div class="daynum">15</div>
+      <span class="eyebrow">Maandag · juni</span>
+      <h2>Biertan, en door het heuvelland naar Cluj</h2>
+      <p class="factstrip"><b>Route</b> Sighișoara naar Cluj-Napoca · ca. 220 km, 4 u rijden · <b>overnachting</b> Cluj</p>
+    </div>
+    <svg class="daglijn" viewBox="0 0 640 76" role="img" aria-label="Daglijn: Sighișoara, Biertan, Cluj">
+      <line x1="20" y1="42" x2="620" y2="42" stroke="#41604D" stroke-width="1.5"/>
+      <circle cx="20" cy="42" r="4.5" fill="#23291F"/>
+      <circle cx="160" cy="42" r="4" fill="#2E4E8F"/>
+      <rect x="-3.5" y="-3.5" width="7" height="7" fill="#A8854B" transform="translate(560,42) rotate(45)"/>
+      <circle cx="620" cy="42" r="4.5" fill="#23291F"/>
+      <g font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="11" fill="#23291F">
+        <text x="20" y="26">Sighișoara</text>
+        <text x="160" y="26" text-anchor="middle">Biertan</text>
+        <text x="620" y="26" text-anchor="end">Cluj-Napoca</text>
+        <text x="540" y="62" text-anchor="end" fill="#41604D">Cetățuia, avond</text>
+      </g>
+    </svg>
+    <figure class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Biertan_-_Ansamblul_bisericii_evanghelice_fortificate_-_vedere_panoramica_2.jpg/1200px-Biertan_-_Ansamblul_bisericii_evanghelice_fortificate_-_vedere_panoramica_2.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/d/d2/Biertan_-_Ansamblul_bisericii_evanghelice_fortificate_-_vedere_panoramica_2.jpg" data-cache="biertan" alt="Biertan met drie muurringen" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{this.closest('figure').classList.add('img-failed');var h=this.closest('header');if(h)h.classList.add('noimg');}"><span class="ph">Biertan</span><figcaption>Biertan: drie concentrische ringen rond de hallenkerk &middot; <em>Wikimedia Commons</em></figcaption></figure>
+    <h3><span class="tijd">Vanaf 10:00, ca. 1,5 uur</span><br>Biertan, drie muurringen rond één kerk</h3>
+    <p>Een half uur rijden door golvend Saksisch land. De kerkburcht van Biertan (UNESCO) is de grootste en meest indrukwekkende van allemaal: drie concentrische muurringen rond een laatgotische hallenkerk op een heuvel midden in het dorp. Van 1572 tot 1867 zetelde hier de Lutherse bisschop van Transsylvanië, en dat verklaart de schaal.</p>
+    <p>Twee details om te zoeken. De sacristiedeur heeft een slot uit 1515 dat met één sleutelomdraai 19 grendels tegelijk sluit; het won een prijs op de Wereldtentoonstelling van Parijs in 1900. En dan het echtscheidingskamertje: stellen die wilden scheiden werden er twee weken samen opgesloten met één bed, één bord en één lepel. In 300 jaar zou daarna slechts één paar alsnog zijn gescheiden.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère</span>
+      <h4>De bovenste muurring van Biertan</h4>
+      <p>Vanaf de hoogste ring kijk je over de pannendaken van het dorp en de wijngaardheuvels erachter. Wie nog een half uur extra heeft: het zijdal naar Richiș en Copșa Mare is van hetzelfde Saksische laken, maar dan zonder bezoekers.</p>
+    </div>
+    <h3><span class="tijd">Middag, ca. 2 u 45</span><br>Naar Cluj</h3>
+    <p>Via Mediaș en Târnăveni naar de A3/E60. Aankomst rond 16:00. Inchecken en de auto laten staan: alles in Cluj doe je te voet.</p>
+    <h3><span class="tijd">Avond</span><br>Cluj-Napoca, eerste indruk</h3>
+    <p>Cluj is het tegendeel van alles wat je tot nu toe zag: de tweede stad van het land, de grootste universiteitsstad van Roemenië, jong en in beweging. Loop van Piața Unirii, met de gotische Sint-Michaëlskerk (14e en 15e eeuw) en het ruiterstandbeeld van Matthias Corvinus, naar Piața Muzeului voor terrassen en eten. Het Hongaarse erfgoed is overal voelbaar: Cluj, Kolozsvár in het Hongaars, was eeuwenlang de hoofdstad van Transsylvanië onder Hongaars bestuur.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère</span>
+      <h4>De Cetățuia-heuvel bij zonsondergang</h4>
+      <p>Een kwartier klimmen vanaf de rivier, naar de resten van het Habsburgse fort boven de stad. Het uitzichtplatform kijkt recht op de Sint-Michaëlskerk en de daken van het centrum. Rond zonsondergang zit half studerend Cluj hier op de muurtjes.</p>
+    </div>
+    <div class="prak">
+      <span class="lbl">Praktisch</span>
+      <ul>
+        <li>Biertan: gepaste kleding voor de kerk, kassa pakt meestal ook pin.</li>
+        <li>Maandag zijn veel musea in Cluj dicht. Geen probleem: vanavond gaat het om straten en pleinen, niet om collecties.</li>
+        <li>Vooruitblik: morgen begint het belvenster voor KLM (16 t/m 18 juni). Kies alvast een rustig moment, bijvoorbeeld het einde van de middag in Alba Iulia.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAG 16 ================= -->
+<section class="day" id="d16">
+  <div class="wrap">
+    <div class="day-head">
+      <div class="daynum">16</div>
+      <span class="eyebrow">Dinsdag · juni</span>
+      <h2>De zoutmijn van Turda en de ster van Alba Iulia</h2>
+      <p class="factstrip"><b>Route</b> Cluj naar Alba Iulia · ca. 120 km · <b>overnachting</b> Alba Iulia</p>
+    </div>
+    <svg class="daglijn" viewBox="0 0 640 76" role="img" aria-label="Daglijn: Cluj, Salina Turda, Cheile Turzii, Alba Iulia">
+      <line x1="20" y1="42" x2="620" y2="42" stroke="#41604D" stroke-width="1.5"/>
+      <circle cx="20" cy="42" r="4.5" fill="#23291F"/>
+      <circle cx="180" cy="42" r="4" fill="#2E4E8F"/>
+      <rect x="-3.5" y="-3.5" width="7" height="7" fill="#A8854B" transform="translate(310,42) rotate(45)"/>
+      <circle cx="620" cy="42" r="4.5" fill="#23291F"/>
+      <g font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="11" fill="#23291F">
+        <text x="20" y="26">Cluj</text>
+        <text x="180" y="26" text-anchor="middle">Salina Turda</text>
+        <text x="620" y="26" text-anchor="end">Alba Iulia</text>
+        <text x="310" y="62" text-anchor="middle" fill="#41604D">Cheile Turzii</text>
+      </g>
+    </svg>
+    <figure class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Tereziamijn_Salina_Turda.jpg/1200px-Tereziamijn_Salina_Turda.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/1/1d/Tereziamijn_Salina_Turda.jpg" data-cache="turda" alt="De Terezia-mijn met het ondergrondse meer" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{this.closest('figure').classList.add('img-failed');var h=this.closest('header');if(h)h.classList.add('noimg');}"><span class="ph">Salina Turda</span><figcaption>Salina Turda: het meer in de Terezia-mijn, 120 meter diep &middot; <em>Wikimedia Commons</em></figcaption></figure>
+    <h3><span class="tijd">Optioneel, tot 09:30</span><br>Nog even Cluj</h3>
+    <p>Bij vertrek rond 09:30 kun je eerst de botanische tuin meepakken, een van de grootste van Zuidoost-Europa, of direct doorrijden naar Turda.</p>
+    <h3><span class="tijd">10:30, ca. 2 uur</span><br>Salina Turda, 120 meter onder de grond</h3>
+    <p>Een half uur rijden. In deze zoutmijn werd van de middeleeuwen tot 1932 zout gewonnen; sinds 2010 is hij omgebouwd tot een surrealistische ondergrondse wereld. Je daalt af in de klokvormige Rudolf-mijn: een reuzenrad, een amfitheater en sportveldjes onder een koepel van zwart zout, en helemaal onderin een meer waar je kunt roeien tussen de zoutwanden. De galerijen zelf, met hun horizontale zaaglijnen, vertellen het mijnverhaal beter dan welk museum ook.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère · ondergronds</span>
+      <h4>Het balkon boven de Rudolf-mijn</h4>
+      <p>Voordat je de trappen of de lift neemt: blijf even staan op het panoramabalkon waar je de mijn binnenkomt. Vanaf hier zie je de hele klok in één keer, met het reuzenrad als speelgoed in de diepte. Dit is de foto van de dag.</p>
+    </div>
+    <h3><span class="tijd">Middag, ca. 2 uur wandelen</span><br>Cheile Turzii, de kloof van Turda</h3>
+    <p>Tien minuten rijden van de mijn. De Turda-kloof is bijna 3 kilometer lang, met kalkstenen wanden tot 300 meter; het pad volgt het riviertje over bruggetjes en richels. Vlak, maar deels op stenen: stevige schoenen. Loop zo ver als je wilt en keer om. Het mooiste deel zit in de eerste anderhalve kilometer. Boven je cirkelen vaak roofvogels, en de wanden zijn populair bij klimmers.</p>
+    <h3><span class="tijd">Avond, ca. 1 uur rijden</span><br>Alba Iulia, de zevenpuntige ster</h3>
+    <p>Inchecken en de citadel in. Alba Carolina is de grootste vesting van Roemenië: een zevenpuntige ster in Vauban-stijl, gebouwd door de Habsburgers tussen 1715 en 1738 om hun greep op Transsylvanië te verankeren. Maar de plek is ouder en zwaarder beladen: hier riep op 1 december 1918 de volksvergadering de vereniging van Transsylvanië met Roemenië uit. In 1922 lieten koning Ferdinand en koningin Maria zich hier kronen, in de speciaal gebouwde kroningskathedraal.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère</span>
+      <h4>De wallenroute van Alba Carolina, verlicht</h4>
+      <p>De citadel is in de avond autovrij en aangelicht. Loop over de oostelijke wallen langs de drie barokke poorten: het beeldhouwwerk boven Poort III is het rijkst. Eten kan binnen de muren.</p>
+    </div>
+    <div class="prak">
+      <span class="lbl">Praktisch</span>
+      <ul>
+        <li>Zoutmijn: constant 11 tot 12 graden, trui mee. Kassa accepteert kaart.</li>
+        <li>Kloof: water en stevige schoenen, bij nat weer zijn de richels glad.</li>
+        <li>KLM: het belvenster is open. Een rustig moment vanmiddag of morgenavond in Sibiu werkt goed. Het belscript en de gegevens staan in de bijlage.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAG 17 ================= -->
+<section class="day" id="d17">
+  <div class="wrap">
+    <div class="day-head">
+      <div class="daynum">17</div>
+      <span class="eyebrow">Woensdag · juni</span>
+      <h2>Het bos van de Daciërs en het kasteel van Hunyadi</h2>
+      <p class="factstrip"><b>Route</b> Alba Iulia naar Sibiu · ca. 280 km · zwaarste dag · <b>overnachting</b> Sibiu</p>
+    </div>
+    <svg class="daglijn" viewBox="0 0 640 76" role="img" aria-label="Daglijn: Alba Iulia, Sarmizegetusa, Corvin, Sibiu">
+      <line x1="20" y1="42" x2="620" y2="42" stroke="#41604D" stroke-width="1.5"/>
+      <circle cx="20" cy="42" r="4.5" fill="#23291F"/>
+      <circle cx="200" cy="42" r="4" fill="#2E4E8F"/>
+      <circle cx="400" cy="42" r="4" fill="#2E4E8F"/>
+      <rect x="-3.5" y="-3.5" width="7" height="7" fill="#A8854B" transform="translate(430,42) rotate(45)"/>
+      <circle cx="620" cy="42" r="4.5" fill="#23291F"/>
+      <g font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="11" fill="#23291F">
+        <text x="20" y="26">Alba Iulia</text>
+        <text x="200" y="26" text-anchor="middle">Sarmizegetusa</text>
+        <text x="620" y="26" text-anchor="end">Sibiu</text>
+        <text x="400" y="62" text-anchor="middle" fill="#41604D">Corvin, Hunedoara</text>
+      </g>
+    </svg>
+    <figure class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Sala_Dietei_-_Castelul_Corvinilor.JPG/1200px-Sala_Dietei_-_Castelul_Corvinilor.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/d/d2/Sala_Dietei_-_Castelul_Corvinilor.JPG" data-cache="corvin" alt="De Dieetzaal van Corvin" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{this.closest('figure').classList.add('img-failed');var h=this.closest('header');if(h)h.classList.add('noimg');}"><span class="ph">Corvin</span><figcaption>Corvin: de Dieetzaal met de marmeren zuilen &middot; <em>Wikimedia Commons</em></figcaption></figure>
+    <p>Beslis bij het ontbijt: voel je je fit, dan gaat Sarmizegetusa mee. Zo niet, sla die over en je hebt een ontspannen dag met alleen Corvin.</p>
+    <h3><span class="tijd">08:30 vertrek · 10:00 ter plekke, ca. 2 uur</span><br>Sarmizegetusa Regia, hoofdstad van de Daciërs</h3>
+    <p>Via Orăștie de bergen in; het laatste stuk is smal bergasfalt door het bos, rustig rijden. Sarmizegetusa Regia was de hoofdstad van het Dacische koninkrijk, het rijk van koning Decebalus dat keizer Trajanus in twee bloedige oorlogen (101-102 en 105-106) veroverde. De buit financierde mede het Forum van Trajanus in Rome, en de zuil van Trajanus vertelt het verhaal nog steeds.</p>
+    <p>Wat rest ligt op 1.200 meter in een beukenbos: de fundamenten van ronde en rechthoekige heiligdommen, een stenen zonneschijf van andesiet die vermoedelijk als altaar of kalender diende, en delen van de muren in murus dacicus-techniek. Er is weinig bewegwijzering; de combinatie van ruïnes, stilte en bos is het punt.</p>
+    <h3><span class="tijd">13:30, ca. 2 tot 2,5 uur</span><br>Corvin, het grootste gotische kasteel van het land</h3>
+    <p>Anderhalf uur rijden, en het contrast kan niet groter: van een bosheiligdom naar een kasteel dat oprijst boven een industriestad. Corvin (het Hunyadi-kasteel) werd in de 15e eeuw uitgebouwd door Johannes Hunyadi, de legeraanvoerder die in 1456 bij Belgrado de Ottomaanse opmars stuitte. Zijn zoon Matthias Corvinus, wiens standbeeld je in Cluj zag, werd koning van Hongarije.</p>
+    <p>Binnen: de Ridderzaal met marmeren zuilen, de Dieettoren, torens met namen als Capistrano en de Wees-niet-bang-toren, en opnieuw een legende over een put die door Turkse gevangenen werd gegraven, hier zogenaamd 15 jaar lang. Kassa tot 17:30, dus je timing is ruim.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère</span>
+      <h4>De houten brug naar Corvin</h4>
+      <p>Het volledige silhouet, met alle torens en spitsen boven de slotgracht, zie je het best vanaf de toegangsbrug en het plein ervoor. Kom je rond 13:30 aan, dan valt het licht van opzij op de gevel. Loop na het bezoek ook even links langs de gracht voor het lagere gezichtspunt.</p>
+    </div>
+    <h3><span class="tijd">Avond, ca. 1 u 15</span><br>Naar Sibiu</h3>
+    <p>Via de A1. Inchecken, korte avondwandeling over de Grote Ring als opwarmer voor morgen.</p>
+    <div class="prak">
+      <span class="lbl">Praktisch</span>
+      <ul>
+        <li>Tank vol in Alba Iulia of Orăștie: de bergweg naar Sarmizegetusa heeft geen pompen.</li>
+        <li>Parkeren Sarmizegetusa en Corvin: kleine bedragen, contant is handig.</li>
+        <li>Sla je Sarmizegetusa over, vertrek dan rond 10:30 en neem in Hunedoara ruim de tijd.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAG 18 ================= -->
+<section class="day" id="d18">
+  <div class="wrap">
+    <div class="day-head">
+      <div class="daynum">18</div>
+      <span class="eyebrow">Donderdag · juni</span>
+      <h2>Sibiu, de stad met de ogen</h2>
+      <p class="factstrip"><b>Geen autodag</b> · alles te voet · <b>overnachting</b> Sibiu</p>
+    </div>
+    <svg class="daglijn" viewBox="0 0 640 76" role="img" aria-label="Daglijn: wandeling door Sibiu">
+      <line x1="20" y1="42" x2="620" y2="42" stroke="#41604D" stroke-width="1.5"/>
+      <circle cx="20" cy="42" r="4.5" fill="#23291F"/>
+      <rect x="-3.5" y="-3.5" width="7" height="7" fill="#A8854B" transform="translate(150,42) rotate(45)"/>
+      <circle cx="300" cy="42" r="4" fill="#2E4E8F"/>
+      <circle cx="460" cy="42" r="4" fill="#2E4E8F"/>
+      <circle cx="600" cy="42" r="4" fill="#2E4E8F"/>
+      <g font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="11" fill="#23291F">
+        <text x="20" y="26">Grote Ring</text>
+        <text x="300" y="26" text-anchor="middle">Brukenthal</text>
+        <text x="600" y="26" text-anchor="end">Leugenbrug</text>
+        <text x="150" y="62" text-anchor="middle" fill="#41604D">Raadstoren</text>
+        <text x="460" y="62" text-anchor="middle" fill="#41604D">Trappenpassage</text>
+      </g>
+    </svg>
+    <figure class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Sibiu_panorama.jpg/1200px-Sibiu_panorama.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/f/f8/Sibiu_panorama.jpg" data-cache="sibiu" alt="Panorama over de daken van Sibiu" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{this.closest('figure').classList.add('img-failed');var h=this.closest('header');if(h)h.classList.add('noimg');}"><span class="ph">Sibiu</span><figcaption>Sibiu: de Bovenstad met de ogen op de daken &middot; <em>Wikimedia Commons</em></figcaption></figure>
+    <p>Sibiu (Hermannstadt) was de hoofdstad van de Transsylvaanse Saksen en is dat in de geest nog steeds. De stad droeg in 2007 als eerste in Oost-Europa de titel Culturele Hoofdstad van Europa, onder burgemeester Klaus Iohannis, de latere president. De oude stad bestaat uit een Bovenstad van de patriciërs en een Benedenstad van de ambachtslieden, verbonden door trappen en passages.</p>
+    <h3><span class="tijd">Ochtend</span><br>De Bovenstad en de Raadstoren</h3>
+    <p>Begin op de Grote Ring (Piața Mare) met het Brukenthal-paleis, loop door naar de Kleine Ring (Piața Mică) met de arcadehuizen, en beklim de Raadstoren. Let onderweg op de ogen van Sibiu: de smalle dakvensters die als oogleden over de stad lijken te waken.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère</span>
+      <h4>Het platform van de Raadstoren</h4>
+      <p>Vanaf de toren tussen de twee Ringen overzie je beide pleinen, de evangelische kathedraal en bij helder weer de Făgăraș-toppen waar je zondag overheen rijdt. Klein kaartje, smalle trap, groot overzicht.</p>
+    </div>
+    <h3><span class="tijd">10:00 tot 18:00, reken 1,5 tot 2 uur</span><br>Brukenthal-museum</h3>
+    <p>Samuel von Brukenthal, Habsburgs gouverneur van Transsylvanië, liet zijn kunstverzameling na aan de stad. Het museum opende in 1817 en is daarmee een van de oudste publieke musea van Europa. Sterk in Vlaamse en Duitse meesters: school van Van Eyck, Memling, Cranach.</p>
+    <h3><span class="tijd">Middag</span><br>Omlaag naar de Benedenstad</h3>
+    <p>Via de Trappenpassage (Pasajul Scărilor) daal je af langs de evangelische kathedraal met zijn 73 meter hoge toren. De Leugenbrug (Podul Minciunilor, 1859, de eerste gietijzeren brug van Roemenië) dankt zijn naam aan de verhalen: hij zou instorten onder wie erop liegt.</p>
+    <div class="prak">
+      <span class="lbl">Praktisch</span>
+      <ul>
+        <li>Vandaag is de laatste dag van het KLM-belvenster. Nog niet gebeld? Doe het vanmiddag, gegevens in de bijlage.</li>
+        <li>Voorbereiding op morgen: tank vol, koop water en proviand, leg jas en trui boven op de tas. Vertrek 08:00.</li>
+        <li>Check vanavond de Facebookpagina van DRDP Craiova voor de actuele staat van de Transalpina.</li>
+        <li>Avond: terras op de Kleine Ring, niet te laat.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAG 19 ================= -->
+<section class="day" id="d19">
+  <div class="wrap">
+    <div class="day-head">
+      <div class="daynum">19</div>
+      <span class="eyebrow">Vrijdag · juni</span>
+      <h2>De Transalpina, over het dak van de reis</h2>
+      <p class="factstrip"><b>Route</b> Sibiu naar Horezu · ca. 230 km, hele dag · <b>overnachting</b> Horezu</p>
+    </div>
+    <svg class="daglijn" viewBox="0 0 640 76" role="img" aria-label="Daglijn: Sibiu, Oașa, Obârșia Lotrului, Urdele, Rânca, Horezu">
+      <line x1="20" y1="42" x2="620" y2="42" stroke="#41604D" stroke-width="1.5"/>
+      <circle cx="20" cy="42" r="4.5" fill="#23291F"/>
+      <rect x="-3.5" y="-3.5" width="7" height="7" fill="#A8854B" transform="translate(160,42) rotate(45)"/>
+      <circle cx="280" cy="42" r="4" fill="#2E4E8F"/>
+      <rect x="-3.5" y="-3.5" width="7" height="7" fill="#A8854B" transform="translate(400,42) rotate(45)"/>
+      <circle cx="490" cy="42" r="4" fill="#2E4E8F"/>
+      <circle cx="620" cy="42" r="4.5" fill="#23291F"/>
+      <g font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="11" fill="#23291F">
+        <text x="20" y="26">Sibiu</text>
+        <text x="280" y="26" text-anchor="middle">Obârșia Lotrului</text>
+        <text x="490" y="26" text-anchor="middle">Rânca</text>
+        <text x="620" y="26" text-anchor="end">Horezu</text>
+        <text x="160" y="62" text-anchor="middle" fill="#41604D">Oașa-meer</text>
+        <text x="400" y="62" text-anchor="middle" fill="#41604D">Urdele, 2.145 m</text>
+      </g>
+    </svg>
+    <figure class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Transalpina,_drumul_regelui_2.JPG/1200px-Transalpina,_drumul_regelui_2.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/0/0c/Transalpina,_drumul_regelui_2.JPG" data-cache="transalpina" alt="De Transalpina boven de boomgrens" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{this.closest('figure').classList.add('img-failed');var h=this.closest('header');if(h)h.classList.add('noimg');}"><span class="ph">Transalpina</span><figcaption>De Koningsweg over de Parâng &middot; <em>Wikimedia Commons</em></figcaption></figure>
+    <h3>Het verhaal van de weg</h3>
+    <p>De DN67C is met de Urdele-pas (2.145 meter) de hoogste verharde weg van Roemenië, hoger dan de Transfăgărășan. De route over de Parâng-bergen is eeuwenoud: herders dreven hier hun kuddes en Romeinse legioenen staken hier vermoedelijk de Karpaten over. Koning Carol II liet de weg in de jaren 1930 verharden, vandaar de bijnaam Drumul Regelui, de Koningsweg. Pas tussen 2009 en 2012 werd hij volledig geasfalteerd.</p>
+    <p>Stand van zaken: het bergdeel tussen Rânca en Curpăt is sinds 29 mei open. Tot en met 30 juni rijd je er tussen 09:00 en 20:00, maximaal 30 km/u, en alleen met voertuigen tot 3,5 ton. Bij slecht weer kan de weg tijdelijk dicht; daarom heb je gisteravond de status gecheckt.</p>
+    <h3><span class="tijd">08:00 vertrek</span><br>De Sebeș-vallei in</h3>
+    <p>Via de A1 naar Sebeș, dan zuidwaarts de vallei in. Na ongeveer een uur en een kwartier begint het mooie deel.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère · 1</span>
+      <h4>Het Oașa-stuwmeer</h4>
+      <p>Turkooizen water omringd door sparrenbos, met het houten klooster van Oașa aan de oever. Meerdere stopplekken langs de weg; de beste ligt aan de zuidpunt, waar je het meer in de lengte ziet.</p>
+    </div>
+    <h3><span class="tijd">Ca. 10:30</span><br>Obârșia Lotrului, laatste halte voor het hooggebergte</h3>
+    <p>Op dit kruispunt staan de laatste eethuisjes voor de pas. Hierna begint het gereguleerde bergdeel, dat om 09:00 is opengegaan, dus jij kunt direct door.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère · 2</span>
+      <h4>De klim boven de boomgrens</h4>
+      <p>Het landschap wordt kaal en weids: gras, rotsen, schapen, en de weg die zich in lussen omhoog vouwt. De verplichte 30 km/u voelt hier vanzelfsprekend. Stop alleen in de aangelegde havens, de bermen zijn zacht.</p>
+    </div>
+    <div class="vista">
+      <span class="lbl">Belvedère · 3</span>
+      <h4>Pasul Urdele, 2.145 meter</h4>
+      <p>Het hoogste punt van je reis. Parkeer en loop een stukje het pad op de graskam op voor het volle panorama over de Parâng. Vaak fris en winderig, ook in juni: jas mee. Bij de verkoopkraampjes is de kaas van de herders het echte souvenir.</p>
+    </div>
+    <div class="vista">
+      <span class="lbl">Belvedère · 4</span>
+      <h4>De afdaling naar Rânca</h4>
+      <p>De zuidkant is steiler en dramatischer dan de noordkant, met diepe blikken het Olteense laagland in. De eerste haarspeldbochten onder de pas hebben de beste doorkijkjes. Rânca zelf is een rommelig skioord: doorrijden, of alleen koffie.</p>
+    </div>
+    <h3><span class="tijd">Ca. 14:30 tot 15:00</span><br>Novaci, en door naar Horezu</h3>
+    <p>In Novaci eindigt de bergweg. Vandaar is het 40 minuten oostwaarts naar Horezu, een klein stadje dat beroemd is om zijn aardewerk: het Horezu-keramiek met het haanmotief staat op de UNESCO-lijst van immaterieel erfgoed. De werkplaatsen langs de Olari-straat, de Pottenbakkersstraat, zijn vrijdagmiddag vaak nog open. Een handgedraaid bord is het beste tastbare aandenken van deze reis. Rustige avond, eenvoudig eten.</p>
+    <div class="prak">
+      <span class="lbl">Praktisch</span>
+      <ul>
+        <li>Brandstof: tank vol in of bij Sebeș. Tussen de vallei en Novaci is geen betrouwbaar tankstation.</li>
+        <li>Herdershonden bij kuddes op de weg: stapvoets passeren, niet claxonneren, raam dicht.</li>
+        <li>Boven kan het rond de 5 graden zijn met wind. Jas en trui binnen handbereik.</li>
+        <li>Pinnen kan lang niet overal op de pas: wat contant geld voor koffie en kaas.</li>
+        <li>Bewolkt op de top? Wacht 20 minuten bij Obârșia Lotrului, de wolken trekken hier vaak in golven over.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAG 20 ================= -->
+<section class="day" id="d20">
+  <div class="wrap">
+    <div class="day-head">
+      <div class="daynum">20</div>
+      <span class="eyebrow">Zaterdag · juni</span>
+      <h2>Brâncoveanu's kloosters en de kloof van de Olt</h2>
+      <p class="factstrip"><b>Route</b> Horezu naar Curtea de Argeș · ca. 130 km · <b>overnachting</b> Curtea de Argeș</p>
+    </div>
+    <svg class="daglijn" viewBox="0 0 640 76" role="img" aria-label="Daglijn: Horezu, klooster, Olt-vallei, Cozia, Curtea de Argeș">
+      <line x1="20" y1="42" x2="620" y2="42" stroke="#41604D" stroke-width="1.5"/>
+      <circle cx="20" cy="42" r="4.5" fill="#23291F"/>
+      <circle cx="120" cy="42" r="4" fill="#2E4E8F"/>
+      <rect x="-3.5" y="-3.5" width="7" height="7" fill="#A8854B" transform="translate(290,42) rotate(45)"/>
+      <circle cx="400" cy="42" r="4" fill="#2E4E8F"/>
+      <circle cx="620" cy="42" r="4.5" fill="#23291F"/>
+      <g font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="11" fill="#23291F">
+        <text x="20" y="26">Horezu</text>
+        <text x="120" y="62" text-anchor="middle" fill="#41604D">klooster</text>
+        <text x="290" y="26" text-anchor="middle">Olt-kloof</text>
+        <text x="400" y="62" text-anchor="middle" fill="#41604D">Cozia</text>
+        <text x="620" y="26" text-anchor="end">Curtea de Argeș</text>
+      </g>
+    </svg>
+    <figure class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Hurezi_(14409373470).jpg/1200px-Hurezi_(14409373470).jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/a/ab/Hurezi_(14409373470).jpg" data-cache="horezu" alt="Het klooster van Horezu" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{this.closest('figure').classList.add('img-failed');var h=this.closest('header');if(h)h.classList.add('noimg');}"><span class="ph">Horezu</span><figcaption>Horezu, meesterwerk van de Brâncovenesc-stijl &middot; <em>Wikimedia Commons</em></figcaption></figure>
+    <h3><span class="tijd">Ochtend, ca. 1,5 uur</span><br>Het klooster van Horezu</h3>
+    <p>Tien minuten rijden van het stadje. Dit klooster (1690-1697) is het meesterwerk van de Brâncovenesc-stijl en UNESCO-werelderfgoed. Vorst Constantin Brâncoveanu liet hier de stijl ontstaan die Byzantijnse, Ottomaanse en barokke elementen versmelt: sierlijke stenen zuilen, rijk houtsnijwerk, fresco's in diepe kleuren. Brâncoveanu zelf eindigde tragisch: in 1714 werd hij in Constantinopel met zijn vier zonen onthoofd omdat hij weigerde zich tot de islam te bekeren. De orthodoxe kerk heeft hen heilig verklaard. Het klooster wordt nog bewoond door nonnen: schouders en knieën bedekt.</p>
+    <h3><span class="tijd">Middag</span><br>Door de Olt-kloof naar Cozia</h3>
+    <p>Oostwaarts naar Râmnicu Vâlcea, dan de DN7 de Olt-kloof in, waar rivier, weg en spoor zich samen door de Karpaten persen. Het Cozia-klooster (1388) ligt direct aan de weg, aan de oever van de Olt. Het is een van de oudste en best bewaarde middeleeuwse kerken van Walachije, gesticht door Mircea cel Bătrân, de vorst die als eerste de Ottomanen weerstond en die hier begraven ligt. Klein, maar dicht bij het origineel gebleven. Een half uur tot drie kwartier volstaat.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère</span>
+      <h4>De oever van de Olt bij Cozia</h4>
+      <p>Achter het klooster ligt een terras aan het water. Je kijkt de kloof in, met de Cozia-massieven aan weerszijden en af en toe een trein die zich langs de overkant perst. De buitenfresco's van de kerk vangen hier het middaglicht.</p>
+    </div>
+    <h3><span class="tijd">Namiddag</span><br>Curtea de Argeș, de koninklijke necropool</h3>
+    <p>Nog een uur rijden. Curtea de Argeș was de eerste hoofdstad van Walachije. Het klooster van Curtea de Argeș (1517, gesticht door Neagoe Basarab) is de koninklijke necropool van Roemenië: hier liggen Carol I, Ferdinand en koningin Maria, en sinds 2017 ook de laatste koning, Michael I.</p>
+    <p>Aan de kerk kleeft de bekendste bouwlegende van het land. Meester Manole kreeg de muren pas overeind nadat hij, zoals de droom hem opdroeg, zijn eigen zwangere vrouw levend inmetselde. Toen de vorst na voltooiing vroeg of Manole iets mooiers kon bouwen en die ja zei, liet hij de steigers weghalen. Manole stortte neer, en op die plek ontsprong een bron die er nog altijd is.</p>
+    <figure class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/BisericaEpiscopalaCurteaDeArges.JPG/1200px-BisericaEpiscopalaCurteaDeArges.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/5/59/BisericaEpiscopalaCurteaDeArges.JPG" data-cache="curtea" alt="De kathedraal van Curtea de Argeș" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{this.closest('figure').classList.add('img-failed');var h=this.closest('header');if(h)h.classList.add('noimg');}"><span class="ph">Curtea de Argeș</span><figcaption>De koninklijke necropool van Curtea de Argeș &middot; <em>Wikimedia Commons</em></figcaption></figure>
+    <div class="vista">
+      <span class="lbl">Belvedère</span>
+      <h4>De kathedraal in het gouden uur</h4>
+      <p>De gedraaide torens en het reliëfwerk komen het best uit rond 19:00 tot 20:00, wanneer de zon laag op de westgevel staat. Het park ervoor heeft bankjes op precies de goede afstand.</p>
+    </div>
+    <div class="prak">
+      <span class="lbl">Praktisch</span>
+      <ul>
+        <li>Vanavond: status Transfăgărășan checken op de Facebookpagina van CNAIR (Cristian Pistol), en daarbij specifiek of de werkafsluiting bij de Vidraru-dam nog geldt. Dat bepaalt je vertrektijd morgen, zie dag 21.</li>
+        <li>Tank vol in Curtea de Argeș: morgen rijd je de berg op en weer terug zonder zekere pomp onderweg.</li>
+        <li>Vroeg eten, vroeg slapen. Morgen is de koningsetappe.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAG 21 ================= -->
+<section class="day" id="d21">
+  <div class="wrap">
+    <div class="day-head">
+      <div class="daynum">21</div>
+      <span class="eyebrow">Zondag · juni</span>
+      <h2>De Transfăgărășan, met dynamiet door de Făgăraș</h2>
+      <p class="factstrip"><b>Retour</b> vanuit Curtea de Argeș · ca. 160 km · lange dag · <b>overnachting</b> Curtea de Argeș</p>
+    </div>
+    <svg class="daglijn" viewBox="0 0 640 76" role="img" aria-label="Daglijn: Curtea de Argeș, Vidraru, Capra, Bâlea Lac, serpentines, retour">
+      <line x1="20" y1="42" x2="620" y2="42" stroke="#41604D" stroke-width="1.5"/>
+      <circle cx="20" cy="42" r="4.5" fill="#23291F"/>
+      <rect x="-3.5" y="-3.5" width="7" height="7" fill="#A8854B" transform="translate(150,42) rotate(45)"/>
+      <rect x="-3.5" y="-3.5" width="7" height="7" fill="#A8854B" transform="translate(310,42) rotate(45)"/>
+      <circle cx="430" cy="42" r="4" fill="#2E4E8F"/>
+      <rect x="-3.5" y="-3.5" width="7" height="7" fill="#A8854B" transform="translate(550,42) rotate(45)"/>
+      <circle cx="620" cy="42" r="4.5" fill="#23291F"/>
+      <g font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="11" fill="#23291F">
+        <text x="20" y="26">Curtea de Argeș</text>
+        <text x="430" y="26" text-anchor="middle">Bâlea Lac</text>
+        <text x="620" y="26" text-anchor="end">retour</text>
+        <text x="150" y="62" text-anchor="middle" fill="#41604D">Vidraru, Poenari</text>
+        <text x="310" y="62" text-anchor="middle" fill="#41604D">Capra</text>
+        <text x="550" y="62" text-anchor="middle" fill="#41604D">serpentines</text>
+      </g>
+    </svg>
+    <figure class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Balea_lake_and_chalet.JPG/1200px-Balea_lake_and_chalet.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/0/00/Balea_lake_and_chalet.JPG" data-cache="balea" alt="Bâlea Lac in het keteldal" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{this.closest('figure').classList.add('img-failed');var h=this.closest('header');if(h)h.classList.add('noimg');}"><span class="ph">Bâlea Lac</span><figcaption>Bâlea Lac, 2.034 meter, het hoogste punt van de route &middot; <em>Wikimedia Commons</em></figcaption></figure>
+    <h3>Het verhaal van de weg</h3>
+    <p>De DN7C werd tussen 1970 en 1974 op bevel van Ceaușescu door de Făgăraș-bergen geblazen, letterlijk: het leger gebruikte duizenden tonnen dynamiet. De aanleiding was de Sovjet-inval in Tsjechoslowakije in 1968. Roemenië wilde een militaire route over de Karpaten die niet door de kwetsbare valleien liep. De bouw kostte officieel rond de 40 arbeiders het leven; onofficiële schattingen liggen hoger. In 2009 riep Top Gear hem uit tot beste autoweg ter wereld, en sindsdien is hij wereldberoemd.</p>
+    <p>Stand van zaken: het bergdeel tussen Piscul Negru en Bâlea Cascadă is op vrijdag 12 juni heropend, na acht maanden sneeuw. Rijden mag dagelijks tussen 07:00 en 21:00.</p>
+    <h3>De Vidraru-kwestie, en waarom je iets eerder vertrekt</h3>
+    <p>Sinds 17 februari is het korte wegvak bij de Vidraru-dam (km 61+500 tot 61+750) afgesloten tijdens werkzaamheden aan de stuwdam. In het weekend geldt dat van 08:00 tot 11:00. Of dit op 21 juni nog van kracht is, was bij het maken van deze gids niet bevestigd: dat heb je gisteravond gecheckt.</p>
+    <p>Geldt de afsluiting nog, rijd dan volgens het schema hieronder: vertrek 06:45 en passeer de dam vóór 08:00, zonder te stoppen. Poenari en de dam zelf bewaar je voor de terugweg in de middag, wanneer het vak weer open is. Is de afsluiting opgeheven, dan kun je rustiger aan doen, al blijft vroeg vertrekken slim: Bâlea is voor 10:30 nog stil.</p>
+    <h3><span class="tijd">06:45 vertrek · vóór 08:00 voorbij de dam</span><br>Omhoog langs het Vidraru-meer</h3>
+    <p>Onderweg passeer je Poenari op de rotspunt en daarna de dam; allebei zie je vanmiddag van dichtbij. De weg slingert vervolgens 20 kilometer langs de oever van het stuwmeer, dan begint de echte klim door het bos. Onderweg staan waarschuwingsborden voor beren: stop niet om ze te voeren, hoe dichtbij ze ook komen. Het klinkt absurd, het gebeurt dagelijks.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère</span>
+      <h4>De Capra-waterval</h4>
+      <p>Aan de zuidkant, vlak onder de pashoogte, direct aan de weg. De waterval stort hier in trappen het keteldal in. Korte stop, grote foto.</p>
+    </div>
+    <h3><span class="tijd">Ca. 09:30</span><br>Bâlea Lac, 2.034 meter</h3>
+    <p>Een gletsjermeer in een granieten keteldal, het hoogste punt van de route. Wandel het pad rond het meer (45 minuten) en drink iets bij een van de hutten. Door je vroege vertrek ben je hier ruim voor de drukte.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère · de klassieker</span>
+      <h4>De serpentines aan de noordkant</h4>
+      <p>Het beroemde uitzicht ligt aan de nóórdzijde. Rijd door de Bâlea-tunnel (887 meter, de langste wegtunnel van Roemenië) en daal 2 tot 3 kilometer af. Bij de eerste grote haarspeldbochten kun je parkeren en heb je het volledige zicht op de weg die zich het dal in vouwt. Daarna keren en terug door de tunnel.</p>
+    </div>
+    <h3><span class="tijd">Middag</span><br>Terug zuidwaarts, nu met tijd voor de dam en Poenari</h3>
+    <p>Alles wat je vanochtend in schaduw zag, ligt nu in ander licht.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère</span>
+      <h4>De kruin van de Vidraru-dam</h4>
+      <p>Een boogdam van 166 meter hoog uit 1966, destijds een van de hoogste van Europa. Parkeer en loop de dam over; het stuwmeer strekt zich 10 kilometer noordwaarts uit. Op de bergkam ernaast staat het stalen Prometheus-beeld met de bliksem, een monument voor de elektriciteit. Let op de tijdelijke borden van de werkzaamheden en parkeer alleen waar het mag.</p>
+    </div>
+    <p>Dan Poenari: de ruïne op de rotspunt is de échte burcht van Vlad Țepeș, niet Bran. De klim telt 1.480 treden door het bos. Poenari is de afgelopen jaren herhaaldelijk gesloten geweest wegens berenactiviteit en restauratie: check ter plekke of bij je hotel of de trap open is. Zo niet, dan heb je vanaf de weg alsnog goed zicht op de burcht. Terug in Curtea de Argeș rond 16:00 tot 17:00. Tijd over? De kathedraal bij avondlicht, of gewoon een terras.</p>
+    <h3>Slechtweerscenario</h3>
+    <p>Bergdeel dicht of zicht nul? Schuif de hele dag naar maandag 22 juni: vroeg de Transfăgărășan, daarna in één keer door naar Boekarest. Lang, maar haalbaar.</p>
+    <div class="prak">
+      <span class="lbl">Praktisch</span>
+      <ul>
+        <li>Volle tank vanuit Curtea de Argeș, koffie en ontbijt mee voor onderweg: voor 09:00 is boven weinig open.</li>
+        <li>Boven rond de 5 graden, ook in juni. Jas, trui, dichte schoenen.</li>
+        <li>Lichten aan in de tunnel; binnen is het nat en koud.</li>
+        <li>Contant geld voor de hutten bij Bâlea en parkeerterreintjes.</li>
+        <li>Zondagmiddag wordt het druk op de noordkant: jouw schema houdt je er net voor.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAG 22 ================= -->
+<section class="day" id="d22">
+  <div class="wrap">
+    <div class="day-head">
+      <div class="daynum">22</div>
+      <span class="eyebrow">Maandag · juni</span>
+      <h2>Via Mogoșoaia naar Boekarest</h2>
+      <p class="factstrip"><b>Route</b> Curtea de Argeș naar Boekarest · ca. 150 km, 2 u 30 · <b>overnachting</b> Boekarest</p>
+    </div>
+    <svg class="daglijn" viewBox="0 0 640 76" role="img" aria-label="Daglijn: Curtea de Argeș, Mogoșoaia, Boekarest">
+      <line x1="20" y1="42" x2="620" y2="42" stroke="#41604D" stroke-width="1.5"/>
+      <circle cx="20" cy="42" r="4.5" fill="#23291F"/>
+      <circle cx="430" cy="42" r="4" fill="#2E4E8F"/>
+      <circle cx="620" cy="42" r="4.5" fill="#23291F"/>
+      <g font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="11" fill="#23291F">
+        <text x="20" y="26">Curtea de Argeș</text>
+        <text x="430" y="26" text-anchor="middle">Mogoșoaia</text>
+        <text x="620" y="26" text-anchor="end">Boekarest</text>
+      </g>
+    </svg>
+    <p>Een ontspannen rijdag. Pitești onderweg heeft geen trekpleisters, maar Mogoșoaia vlak voor Boekarest wel: het paleis van Constantin Brâncoveanu (1702), de stedelijke tegenhanger van het klooster dat je zaterdag in Horezu zag, met tuinen aan een meer. Een uur is genoeg en het ligt vrijwel op de route.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère</span>
+      <h4>De meerzijde van Mogoșoaia</h4>
+      <p>Loop om het paleis heen naar de waterkant: de loggia met de gedraaide zuilen spiegelt in het meer. Dit is de Brâncovenesc-stijl op zijn lichtst, na de kloosterversie van zaterdag.</p>
+    </div>
+    <h3><span class="tijd">Middag</span><br>Aankomst Boekarest</h3>
+    <p>Auto parkeren bij het hotel en de stad verder te voet of per metro doen; rijden in Boekarest voegt niets toe.</p>
+    <h3><span class="tijd">Avond</span><br>Terug in Lipscani</h3>
+    <p>Je kent de oude stad van dag 2. Nu kun je gericht terug naar wat je toen miste, of een goed restaurant nemen na twee weken bergkost.</p>
+    <div class="prak">
+      <span class="lbl">Praktisch</span>
+      <ul>
+        <li>Metro: contactloos betalen met je bankpas werkt bij de poortjes.</li>
+        <li>Check vandaag je reservering en tijdslot voor het Parlementspaleis van morgen, en leg je paspoort klaar.</li>
+        <li>Mogoșoaia is op maandag soms beperkt open: het park en de buitenkant zijn dan alsnog de moeite.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAG 23 ================= -->
+<section class="day" id="d23">
+  <div class="wrap">
+    <div class="day-head">
+      <div class="daynum">23</div>
+      <span class="eyebrow">Dinsdag · juni</span>
+      <h2>Boekarest, van megalomanie tot boekenpaleis</h2>
+      <p class="factstrip"><b>Geen autodag</b> · te voet en metro · <b>overnachting</b> Boekarest</p>
+    </div>
+    <svg class="daglijn" viewBox="0 0 640 76" role="img" aria-label="Daglijn: wandeling door Boekarest">
+      <line x1="20" y1="42" x2="620" y2="42" stroke="#41604D" stroke-width="1.5"/>
+      <circle cx="20" cy="42" r="4.5" fill="#23291F"/>
+      <rect x="-3.5" y="-3.5" width="7" height="7" fill="#A8854B" transform="translate(200,42) rotate(45)"/>
+      <circle cx="360" cy="42" r="4" fill="#2E4E8F"/>
+      <circle cx="520" cy="42" r="4" fill="#2E4E8F"/>
+      <g font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="11" fill="#23291F">
+        <text x="20" y="26">Parlementspaleis</text>
+        <text x="360" y="26" text-anchor="middle">Piața Revoluției</text>
+        <text x="520" y="62" text-anchor="middle" fill="#41604D">Carusel, Stavropoleos</text>
+        <text x="200" y="62" text-anchor="middle" fill="#41604D">Athenaeum</text>
+      </g>
+    </svg>
+    <figure class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Avenida_de_la_Uni%C3%B3n,_Bucarest,_Ruman%C3%ADa,_2016-05-29,_DD_57.jpg/1200px-Avenida_de_la_Uni%C3%B3n,_Bucarest,_Ruman%C3%ADa,_2016-05-29,_DD_57.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/6/60/Avenida_de_la_Uni%C3%B3n,_Bucarest,_Ruman%C3%ADa,_2016-05-29,_DD_57.jpg" data-cache="parlement" alt="Het Parlementspaleis aan de Bulevardul Unirii" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{this.closest('figure').classList.add('img-failed');var h=this.closest('header');if(h)h.classList.add('noimg');}"><span class="ph">Boekarest</span><figcaption>Het Parlementspaleis, gezien over de Bulevardul Unirii &middot; <em>Wikimedia Commons</em></figcaption></figure>
+    <h3><span class="tijd">Ochtend, gereserveerd tijdslot, paspoort mee</span><br>Het Parlementspaleis</h3>
+    <p>Het op een na grootste administratieve gebouw ter wereld na het Pentagon, en naar verluidt het zwaarste gebouw op aarde. Ceaușescu liet er vanaf 1984 een vijfde van het historische centrum voor slopen: kerken, kloosters en tienduizenden woningen verdwenen voor zijn Huis van het Volk. Het gebouw is nooit afgekomen en wordt voor naar schatting 70 procent niet gebruikt. De rondleiding (ca. 1,5 uur) voert langs marmeren zalen, kilometers tapijt en kroonluchters van duizenden kilo's. De combinatie van megalomanie en leegte is het eigenlijke monument.</p>
+    <div class="vista">
+      <span class="lbl">Belvedère · indien inbegrepen</span>
+      <h4>Het balkon boven de Bulevardul Unirii</h4>
+      <p>Sommige rondleidingen eindigen op het balkon waar Ceaușescu de massa's wilde toespreken. Je kijkt dan over de boulevard die naar het voorbeeld van Parijs werd aangelegd, met de fonteinen in het midden. Vraag bij de start of het balkon in jouw route zit.</p>
+    </div>
+    <h3><span class="tijd">Middag, naar eigen tempo</span><br>Vier adressen in het centrum</h3>
+    <p>Het Roemeens Athenaeum (1888) is de mooiste concertzaal van het land, met een rondlopend fresco van de nationale geschiedenis; overdag vaak te bezichtigen. Piața Revoluției is het plein met het balkon van het voormalige Centraal Comité, waar Ceaușescu op 21 december 1989 zijn laatste toespraak hield en het volk zich tegen hem keerde; vier dagen later was hij dood.</p>
+    <p>Daarna naar Lipscani: boekhandel Cărturești Carusel zit in een gerestaureerd 19e-eeuws bankgebouw, zes verdiepingen rond een wit atrium. En loop het Stavropoleos-klooster (1724) nog eens binnen als je er op dag 2 alleen langs liep: het fijnste stukje Brâncovenesc-stijl van de stad, een miniatuur tussen de uitgaansstraten.</p>
+    <h3><span class="tijd">Avond</span><br>Laatste avond</h3>
+    <p>Pak iets goeds: de stad heeft een sterke restaurantscene rond Piața Amzei en in Lipscani. Tank de auto af en leg je inleverdocumenten klaar.</p>
+    <div class="prak">
+      <span class="lbl">Praktisch</span>
+      <ul>
+        <li>Parlementspaleis: paspoort verplicht, ruim op tijd bij de bezoekersingang zijn, grote tassen kunnen niet mee.</li>
+        <li>Athenaeum: korte broek en hemd zijn prima, dit is geen kerk. Soms dicht voor repetities.</li>
+        <li>Vanavond of morgenvroeg tanken: vol inleveren bespaart de verhuurtoeslag.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAG 24 ================= -->
+<section class="day" id="d24">
+  <div class="wrap">
+    <div class="day-head">
+      <div class="daynum">24</div>
+      <span class="eyebrow">Woensdag · juni</span>
+      <h2>Naar huis, met de bevestiging op zak</h2>
+      <p class="factstrip"><b>Route</b> Boekarest, OTP, Amsterdam · vlucht KL1376</p>
+    </div>
+    <svg class="daglijn" viewBox="0 0 640 76" role="img" aria-label="Daglijn: Boekarest, luchthaven OTP, Amsterdam">
+      <line x1="20" y1="42" x2="620" y2="42" stroke="#41604D" stroke-width="1.5"/>
+      <circle cx="20" cy="42" r="4.5" fill="#23291F"/>
+      <circle cx="280" cy="42" r="4" fill="#2E4E8F"/>
+      <circle cx="620" cy="42" r="4.5" fill="#23291F"/>
+      <g font-family="-apple-system,Helvetica,Arial,sans-serif" font-size="11" fill="#23291F">
+        <text x="20" y="26">Boekarest</text>
+        <text x="280" y="26" text-anchor="middle">OTP, auto inleveren</text>
+        <text x="620" y="26" text-anchor="end">Amsterdam</text>
+        <text x="280" y="62" text-anchor="middle" fill="#41604D">2,5 u voor vertrek aanwezig</text>
+      </g>
+    </svg>
+    <p>Een strakke dag, dus reken terug vanaf vlucht KL1376.</p>
+    <div class="prak">
+      <span class="lbl">Praktisch</span>
+      <ul>
+        <li>Auto inleveren op OTP: plan 30 tot 45 minuten voor de teruggave zelf, inclusief inspectie.</li>
+        <li>Wees minimaal 2,5 uur voor vertrek op de luchthaven; de security op OTP kan traag zijn.</li>
+        <li>Neem je schriftelijke KLM-bevestiging (zaaknummer in je notities) mee, op papier of offline opgeslagen, voor het geval er bij de incheckbalie vragen zijn over de geldigheid van het retour.</li>
+        <li>Ochtendspits op de DN1 richting de luchthaven: vertrek ruim, of neem de A3-aansluiting als je hotel daar gunstiger voor ligt.</li>
+      </ul>
+    </div>
+    <p>En dan zit het erop: veertien dagen, twee passen boven de 2.000 meter, zes UNESCO-sites en ongeveer 1.560 kilometer. De gids mag mee het archief in, naast dat handgedraaide bord uit Horezu.</p>
+  </div>
+</section>
+
+<!-- ================= BIJLAGE ================= -->
+<section class="annex" id="bijlage">
+  <div class="wrap">
+    <span class="eyebrow">Bijlage</span>
+    <h2>Praktisch overzicht</h2>
+
+    <h3>Wegen en tijden, stand 12 juni 2026</h3>
+    <table>
+      <tr><th>Weg</th><th>Rijvenster</th><th>Bijzonderheden</th></tr>
+      <tr><td>Transalpina, bergdeel Rânca-Curpăt</td><td>09:00-20:00 t/m 30 juni</td><td>Open sinds 29 mei. Max 30 km/u, tot 3,5 ton. Vanaf 1 juli 07:00-21:00. Bij slecht weer dicht.</td></tr>
+      <tr><td>Transfăgărășan, bergdeel Piscul Negru-Bâlea Cascadă</td><td>07:00-21:00</td><td>Heropend op 12 juni. Bij slecht weer dicht.</td></tr>
+      <tr><td>Vidraru-wegvak, km 61+500 tot 61+750</td><td>weekend dicht 08:00-11:00, ma t/m do ook 13:00-18:00</td><td>Werkzaamheden stuwdam, sinds 17 februari. Einddatum onbekend: verifiëren op 20 juni.</td></tr>
+    </table>
+
+    <h3>Checkmomenten onderweg</h3>
+    <ul>
+      <li>Avond 18 juni: Facebook DRDP Craiova voor de Transalpina-status.</li>
+      <li>Avond 20 juni: Facebook CNAIR (Cristian Pistol) voor de Transfăgărășan-status en de Vidraru-afsluiting.</li>
+      <li>16, 17 of 18 juni: KLM bellen, zie hieronder.</li>
+    </ul>
+
+    <h3>KLM, retourvlucht KL1376</h3>
+    <p>Doel van het gesprek: schriftelijke bevestiging dat het retour op 24 juni (Boekarest-Amsterdam) geldig blijft na de gemiste heenvlucht van 7 juni. Verwijs naar je zaaknummer en boekingscode (allebei in je notities) en naar de uitzondering in artikel 3.4 van de vervoersvoorwaarden. Het uitgewerkte belscript staat in je notities. Vraag de bevestiging per e-mail en bewaar die offline.</p>
+
+    <h3>Boekvolgorde, voor zover nog open</h3>
+    <ul>
+      <li>1. Horezu (19 juni): klein aanbod, dit eerst.</li>
+      <li>2. Parlementspaleis: tijdslot voor 23 juni reserveren, paspoortnummer bij de hand.</li>
+      <li>3. Daarna: Cluj (15), Alba Iulia (16), Sibiu (17-18), Curtea de Argeș (20-21), Boekarest (22-23).</li>
+    </ul>
+
+    <h3>Beren</h3>
+    <ul>
+      <li>Niet voeren, niet uitstappen voor foto's, eten uit het zicht in de auto.</li>
+      <li>Geldt vooral op de Transfăgărășan en bij Zărnești. Bij een beer op de weg: doorrijden in een rustig tempo, raam dicht.</li>
+      <li>Te voet in berengebied: praat of maak geluid in onoverzichtelijke bochten, blijf op het pad.</li>
+    </ul>
+
+    <h3>Kloosters en kerken</h3>
+    <ul>
+      <li>Schouders en knieën bedekt; een lichte sjaal in de daypack lost dit overal op.</li>
+      <li>Binnen meestal geen flitsfoto's, soms een kleine fotovergoeding.</li>
+      <li>Horezu en Curtea de Argeș zijn bewoond: stilte op het binnenterrein.</li>
+    </ul>
+
+    <h3>Geld en tanken</h3>
+    <ul>
+      <li>Pinnen kan vrijwel overal in steden; contant nodig voor dorpslunches, parkeerveldjes, pendelbusjes en de hutten op de passen.</li>
+      <li>Twee vaste tankmomenten: vol bij Sebeș op 19 juni, en vol in Curtea de Argeș op de avond van 20 juni.</li>
+      <li>Vol inleveren op OTP voorkomt de brandstoftoeslag van de verhuurder.</li>
+    </ul>
+
+    <h3>Kleding en uitrusting</h3>
+    <ul>
+      <li>Op 2.000+ meter kan het ook in juni rond de 5 graden zijn, met wind. Jas en trui standaard in de auto.</li>
+      <li>In de zoutmijn is het 11 tot 12 graden.</li>
+      <li>Stevige schoenen voor de kloven van Zărnești en Turda en de treden van Poenari.</li>
+    </ul>
+
+    <h3>Onderweg en offline</h3>
+    <ul>
+      <li>Download de offline kaart van Roemenië in je navigatie-app: op beide passen valt het bereik geregeld weg.</li>
+      <li>Noodnummer: 112. Bergredding Salvamont: 0725 826 668.</li>
+      <li>De gids als webapp: één keer openen met internet, daarna op het beginscherm zetten. Alles werkt dan offline, foto’s inbegrepen.</li>
+      <li>Deze gids werkt volledig offline. Bewaar het bestand in de Bestanden-app en open het daar.</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Roemenië · juni 2026 · foto-editie, bijgewerkt 12 juni</p>
+</footer>
+
+
+
+
+<script>
+(function(){
+ var CACHE='reisgids-v1';
+ var chip=document.getElementById('cachechip');
+ if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('./sw.js').catch(function(){});
+ }else if(chip){chip.textContent='Offline-opslag wordt door deze browser niet ondersteund.';return;}
+ function upd(){
+  if(!('caches' in window)||!chip)return;
+  caches.open(CACHE).then(function(c){return c.keys();}).then(function(keys){
+   var n=keys.filter(function(r){return r.url.indexOf('upload.wikimedia.org')>-1;}).length;
+   var ok=keys.some(function(r){return r.url.indexOf('index.html')>-1||/\/$/.test(r.url);});
+   chip.textContent=(ok?'Gids offline opgeslagen. ':'Bezig met opslaan... ')+'Foto\u2019s: '+n+' van 14.';
+  }).catch(function(){});
+ }
+ upd();
+ var t=0,iv=setInterval(function(){upd();if(++t>10)clearInterval(iv);},3000);
+})();
+</script>
+</body>
+</html>
