@@ -246,6 +246,16 @@ body{
 .cover.noimg .art{display:block}
 .cover.noimg .cover-photo{display:none}
 #cachechip{margin-top:6px;font-family:var(--sans);font-size:12px;font-style:normal;color:var(--fir-soft)}
+
+/* ---------- galerij ---------- */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:22px 0 6px}
+.gitem{margin:0}
+.gitem img{display:block;width:100%;height:190px;object-fit:cover;border:1px solid var(--rule)}
+.gitem figcaption{font-family:var(--sans);font-size:11px;letter-spacing:.02em;color:var(--fir-soft);padding:5px 1px 0;line-height:1.35}
+@media (min-width:560px){
+  .gallery{grid-template-columns:repeat(3,1fr)}
+  .gitem img{height:175px}
+}
 </style>
 </head>
 <body>
@@ -380,7 +390,9 @@ body{
       </ul>
     </div>
   </div>
-</section>
+
+    <div class="gallery"><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Biserica_fortificata_Prejmer_la_apus.JPG/500px-Biserica_fortificata_Prejmer_la_apus.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/0/0e/Biserica_fortificata_Prejmer_la_apus.JPG" data-cache="d11g0" alt="Prejmer in avondlicht" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Prejmer in avondlicht</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Cetatea_Rasnov_-_vedere_din_turn.JPG/500px-Cetatea_Rasnov_-_vedere_din_turn.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/3/30/Cetatea_Rasnov_-_vedere_din_turn.JPG" data-cache="d11g1" alt="Uitzicht vanaf de toren van Râșnov" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Uitzicht vanaf de toren van Râșnov</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Interior_cetatea_rasnov.JPG/500px-Interior_cetatea_rasnov.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/7/72/Interior_cetatea_rasnov.JPG" data-cache="d11g2" alt="Binnenplaats van de burcht" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Binnenplaats van de burcht</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Spre_Cetatea_Rasnov.JPG/500px-Spre_Cetatea_Rasnov.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/f/f9/Spre_Cetatea_Rasnov.JPG" data-cache="d11g3" alt="De burcht boven het stadje" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De burcht boven het stadje</figcaption></figure></div>
+  </section>
 
 <!-- ================= DAG 12 ================= -->
 <section class="day" id="d12">
@@ -435,7 +447,9 @@ body{
       </ul>
     </div>
   </div>
-</section>
+
+    <div class="gallery"><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Bran_Castle030.jpg/500px-Bran_Castle030.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/1/19/Bran_Castle030.jpg" data-cache="d12g0" alt="Bran van dichtbij" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Bran van dichtbij</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Castelul_Bran-interior.JPG/500px-Castelul_Bran-interior.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/2/22/Castelul_Bran-interior.JPG" data-cache="d12g1" alt="Het interieur van koningin Maria" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Het interieur van koningin Maria</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Piatra_Craiului_Mountains.jpg/500px-Piatra_Craiului_Mountains.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/9/9d/Piatra_Craiului_Mountains.jpg" data-cache="d12g2" alt="De kam van Piatra Craiului" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De kam van Piatra Craiului</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Zarnesti.JPG/500px-Zarnesti.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/b/b0/Zarnesti.JPG" data-cache="d12g3" alt="Winterlicht op het massief" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Winterlicht op het massief</figcaption></figure></div>
+  </section>
 
 <!-- ================= DAG 13 ================= -->
 <section class="day" id="d13">
@@ -482,7 +496,9 @@ body{
       </ul>
     </div>
   </div>
-</section>
+
+    <div class="gallery"><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Viscri_-_vedere_de_pe_metereze.JPG/500px-Viscri_-_vedere_de_pe_metereze.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/c/c2/Viscri_-_vedere_de_pe_metereze.JPG" data-cache="d13g0" alt="Vanaf de muren van Viscri" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Vanaf de muren van Viscri</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Biserica_fortificata_Viscri.JPG/500px-Biserica_fortificata_Viscri.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/8/86/Biserica_fortificata_Viscri.JPG" data-cache="d13g1" alt="De kerkburcht van Viscri" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De kerkburcht van Viscri</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Cetatea_Rupea_(Cetatea_Cohalmului)-judetul_Brasov.jpg/500px-Cetatea_Rupea_(Cetatea_Cohalmului)-judetul_Brasov.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cetatea_Rupea_(Cetatea_Cohalmului)-judetul_Brasov.jpg" data-cache="d13g2" alt="Rupea langs de weg" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Rupea langs de weg</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Cetatea_Rupea_-_interior.JPG/500px-Cetatea_Rupea_-_interior.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/0/00/Cetatea_Rupea_-_interior.JPG" data-cache="d13g3" alt="Binnen de muren van Rupea" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Binnen de muren van Rupea</figcaption></figure></div>
+  </section>
 
 <!-- ================= DAG 14 ================= -->
 <section class="day" id="d14">
@@ -535,7 +551,9 @@ body{
       </ul>
     </div>
   </div>
-</section>
+
+    <div class="gallery"><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Sighisoara._Biserica_din_deal.jpg/500px-Sighisoara._Biserica_din_deal.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/4/41/Sighisoara._Biserica_din_deal.jpg" data-cache="d14g0" alt="De Bergkerk boven de citadel" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De Bergkerk boven de citadel</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Sighisoara_Clock_Tower_-_Turnul_Cu_Ceas_(2).jpg/500px-Sighisoara_Clock_Tower_-_Turnul_Cu_Ceas_(2).jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/e/e1/Sighisoara_Clock_Tower_-_Turnul_Cu_Ceas_(2).jpg" data-cache="d14g1" alt="De Klokkentoren" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De Klokkentoren</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Primaria_Sighisoara.jpg/500px-Primaria_Sighisoara.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/6/68/Primaria_Sighisoara.jpg" data-cache="d14g2" alt="Straatbeeld in de citadel" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Straatbeeld in de citadel</figcaption></figure></div>
+  </section>
 
 <!-- ================= DAG 15 ================= -->
 <section class="day" id="d15">
@@ -586,7 +604,9 @@ body{
       </ul>
     </div>
   </div>
-</section>
+
+    <div class="gallery"><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Biertan_Biserica_fortificata.JPG/500px-Biertan_Biserica_fortificata.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/c/cd/Biertan_Biserica_fortificata.JPG" data-cache="d15g0" alt="De kerkburcht van Biertan" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De kerkburcht van Biertan</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Ansamblul_Bisericii_Fortificate_Biertan.jpg/500px-Ansamblul_Bisericii_Fortificate_Biertan.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/f/f8/Ansamblul_Bisericii_Fortificate_Biertan.jpg" data-cache="d15g1" alt="Het ommuurde ensemble" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Het ommuurde ensemble</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Biserica_Sfantul_Mihail_din_Cluj.JPG/500px-Biserica_Sfantul_Mihail_din_Cluj.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/a/a2/Biserica_Sfantul_Mihail_din_Cluj.JPG" data-cache="d15g2" alt="De Sint-Michaëlskerk in Cluj" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De Sint-Michaëlskerk in Cluj</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Cetatea_Rupea_(Twierdza_Rupea).jpg/500px-Cetatea_Rupea_(Twierdza_Rupea).jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/e/e7/Cetatea_Rupea_(Twierdza_Rupea).jpg" data-cache="d15g3" alt="Onderweg door Saksisch land" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Onderweg door Saksisch land</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cet%C4%83%C8%9Buia_din_Cluj_Napoca.jpg/500px-Cet%C4%83%C8%9Buia_din_Cluj_Napoca.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/4/4e/Cet%C4%83%C8%9Buia_din_Cluj_Napoca.jpg" data-cache="d15g4" alt="Uitzicht vanaf de Cetățuia" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Uitzicht vanaf de Cetățuia</figcaption></figure></div>
+  </section>
 
 <!-- ================= DAG 16 ================= -->
 <section class="day" id="d16">
@@ -639,7 +659,9 @@ body{
       </ul>
     </div>
   </div>
-</section>
+
+    <div class="gallery"><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Rudolfmijn_Salina_Turda.jpg/500px-Rudolfmijn_Salina_Turda.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/3/3b/Rudolfmijn_Salina_Turda.jpg" data-cache="d16g0" alt="De Rudolf-mijn" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De Rudolf-mijn</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Roumanie_Mine_de_sel_de_Turda_2019_8.jpg/500px-Roumanie_Mine_de_sel_de_Turda_2019_8.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/a/a2/Roumanie_Mine_de_sel_de_Turda_2019_8.jpg" data-cache="d16g1" alt="Ondergrondse zaal in het zout" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Ondergrondse zaal in het zout</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Cheile_Turzii-(42).JPG/500px-Cheile_Turzii-(42).JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/e/ea/Cheile_Turzii-(42).JPG" data-cache="d16g2" alt="De Turda-kloof" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De Turda-kloof</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Cetatea_Alba_Carolina_Ansamblul_fortifica%C8%9Biei_%E2%80%9ECetatea_Alba_Iulia_16.jpg/500px-Cetatea_Alba_Carolina_Ansamblul_fortifica%C8%9Biei_%E2%80%9ECetatea_Alba_Iulia_16.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/1/12/Cetatea_Alba_Carolina_Ansamblul_fortifica%C8%9Biei_%E2%80%9ECetatea_Alba_Iulia_16.jpg" data-cache="d16g3" alt="De ster van Alba Carolina" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De ster van Alba Carolina</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Alba_Iulia_-_Poarta_cu_atlanti.jpg/500px-Alba_Iulia_-_Poarta_cu_atlanti.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/b/b4/Alba_Iulia_-_Poarta_cu_atlanti.jpg" data-cache="d16g4" alt="Een barokke poort van de citadel" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Een barokke poort van de citadel</figcaption></figure></div>
+  </section>
 
 <!-- ================= DAG 17 ================= -->
 <section class="day" id="d17">
@@ -689,7 +711,9 @@ body{
       </ul>
     </div>
   </div>
-</section>
+
+    <div class="gallery"><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Sarmisegetusa_Regia_-_ansamblu_1.jpg/500px-Sarmisegetusa_Regia_-_ansamblu_1.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/b/bc/Sarmisegetusa_Regia_-_ansamblu_1.jpg" data-cache="d17g0" alt="Het heiligdomcomplex" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Het heiligdomcomplex</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Sarmizegetusa_Regia_2011_-_Sanctuaries_and_Solar_Disc.jpg/500px-Sarmizegetusa_Regia_2011_-_Sanctuaries_and_Solar_Disc.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/5/53/Sarmizegetusa_Regia_2011_-_Sanctuaries_and_Solar_Disc.jpg" data-cache="d17g1" alt="De stenen zonneschijf" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De stenen zonneschijf</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Castelul_Corvinilor,_municipiul_Hunedoara_04.JPG/500px-Castelul_Corvinilor,_municipiul_Hunedoara_04.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/3/33/Castelul_Corvinilor,_municipiul_Hunedoara_04.JPG" data-cache="d17g2" alt="De binnenplaats van Corvin" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De binnenplaats van Corvin</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Statuie_Iancu_de_Hunedoara_sau_Ioan_Corvin.JPG/500px-Statuie_Iancu_de_Hunedoara_sau_Ioan_Corvin.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/0/0f/Statuie_Iancu_de_Hunedoara_sau_Ioan_Corvin.JPG" data-cache="d17g3" alt="Standbeeld van Hunyadi" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Standbeeld van Hunyadi</figcaption></figure></div>
+  </section>
 
 <!-- ================= DAG 18 ================= -->
 <section class="day" id="d18">
@@ -739,7 +763,9 @@ body{
       </ul>
     </div>
   </div>
-</section>
+
+    <div class="gallery"><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Piata_Mare_din_Sibiu02.JPG/500px-Piata_Mare_din_Sibiu02.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/c/c9/Piata_Mare_din_Sibiu02.JPG" data-cache="d18g0" alt="De Grote Ring" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De Grote Ring</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Centrul_Istoric_Sibiu_-_Piata_Mare.jpg/500px-Centrul_Istoric_Sibiu_-_Piata_Mare.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/0/09/Centrul_Istoric_Sibiu_-_Piata_Mare.jpg" data-cache="d18g1" alt="Het historische hart" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Het historische hart</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Sibiu_(Hermannstadt,_Nagyszeben)_-_Large_Square_(Pia%C8%9Ba_Mare,_Gro%C3%9Fer_Ring).jpg/500px-Sibiu_(Hermannstadt,_Nagyszeben)_-_Large_Square_(Pia%C8%9Ba_Mare,_Gro%C3%9Fer_Ring).jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/8/88/Sibiu_(Hermannstadt,_Nagyszeben)_-_Large_Square_(Pia%C8%9Ba_Mare,_Gro%C3%9Fer_Ring).jpg" data-cache="d18g2" alt="Pleinen van de Bovenstad" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Pleinen van de Bovenstad</figcaption></figure></div>
+  </section>
 
 <!-- ================= DAG 19 ================= -->
 <section class="day" id="d19">
@@ -809,7 +835,9 @@ body{
       </ul>
     </div>
   </div>
-</section>
+
+    <div class="gallery"><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/DN67C_-_Transalpina_(2).JPG/500px-DN67C_-_Transalpina_(2).JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/8/87/DN67C_-_Transalpina_(2).JPG" data-cache="d19g0" alt="De DN67C klimt" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De DN67C klimt</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Transalpina.JPG/500px-Transalpina.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/d/d2/Transalpina.JPG" data-cache="d19g1" alt="Serpentines boven de boomgrens" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Serpentines boven de boomgrens</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Transalpina,_drumul_regelui.JPG/500px-Transalpina,_drumul_regelui.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/1/1f/Transalpina,_drumul_regelui.JPG" data-cache="d19g2" alt="De Koningsweg" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De Koningsweg</figcaption></figure></div>
+  </section>
 
 <!-- ================= DAG 20 ================= -->
 <section class="day" id="d20">
@@ -863,7 +891,9 @@ body{
       </ul>
     </div>
   </div>
-</section>
+
+    <div class="gallery"><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Hurezi_(14409341130).jpg/500px-Hurezi_(14409341130).jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/8/84/Hurezi_(14409341130).jpg" data-cache="d20g0" alt="Het klooster van Horezu" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Het klooster van Horezu</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Hurezi_(14409376520).jpg/500px-Hurezi_(14409376520).jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/7/70/Hurezi_(14409376520).jpg" data-cache="d20g1" alt="Zuilengang in Brâncovenesc-stijl" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Zuilengang in Brâncovenesc-stijl</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Ceramic%C4%83_Horezu_unu.jpg/500px-Ceramic%C4%83_Horezu_unu.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/6/69/Ceramic%C4%83_Horezu_unu.jpg" data-cache="d20g2" alt="Horezu-keramiek met haanmotief" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Horezu-keramiek met haanmotief</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Curtea_de_Arges_monastery.JPG/500px-Curtea_de_Arges_monastery.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/c/cb/Curtea_de_Arges_monastery.JPG" data-cache="d20g3" alt="De kathedraal van Curtea de Argeș" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De kathedraal van Curtea de Argeș</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/BisericaEpiscopalaCurteaDeArges_(18).JPG/500px-BisericaEpiscopalaCurteaDeArges_(18).JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/0/06/BisericaEpiscopalaCurteaDeArges_(18).JPG" data-cache="d20g4" alt="Gedraaide torens, detail" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Gedraaide torens, detail</figcaption></figure></div>
+  </section>
 
 <!-- ================= DAG 21 ================= -->
 <section class="day" id="d21">
@@ -934,7 +964,9 @@ body{
       </ul>
     </div>
   </div>
-</section>
+
+    <div class="gallery"><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Transfagarasan_road_with_Bilea_Lake.jpg/500px-Transfagarasan_road_with_Bilea_Lake.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/3/34/Transfagarasan_road_with_Bilea_Lake.jpg" data-cache="d21g0" alt="De weg bij Bâlea" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De weg bij Bâlea</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Lake_B%C3%A2lea_and_the_Transf%C4%83g%C4%83r%C4%83%C5%9Fan_road.jpg/500px-Lake_B%C3%A2lea_and_the_Transf%C4%83g%C4%83r%C4%83%C5%9Fan_road.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/1/1f/Lake_B%C3%A2lea_and_the_Transf%C4%83g%C4%83r%C4%83%C5%9Fan_road.jpg" data-cache="d21g1" alt="Het meer en de weg" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Het meer en de weg</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Cetatea_Poenari_-_vedere_principala.JPG/500px-Cetatea_Poenari_-_vedere_principala.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/1/17/Cetatea_Poenari_-_vedere_principala.JPG" data-cache="d21g2" alt="De ruïne van Poenari" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De ruïne van Poenari</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Baraj_Vidraru.e_-_panoramio.jpg/500px-Baraj_Vidraru.e_-_panoramio.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/9/97/Baraj_Vidraru.e_-_panoramio.jpg" data-cache="d21g3" alt="De Vidraru-dam" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De Vidraru-dam</figcaption></figure></div>
+  </section>
 
 <!-- ================= DAG 22 ================= -->
 <section class="day" id="d22">
@@ -975,7 +1007,9 @@ body{
       </ul>
     </div>
   </div>
-</section>
+
+    <div class="gallery"><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Mogosoaia_Palace,_view_of_the_garden_and_lake.JPG/500px-Mogosoaia_Palace,_view_of_the_garden_and_lake.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/7/73/Mogosoaia_Palace,_view_of_the_garden_and_lake.JPG" data-cache="d22g0" alt="Mogoșoaia aan het meer" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Mogoșoaia aan het meer</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Ansamblul_Mogo%C8%99oaia_02.jpg/500px-Ansamblul_Mogo%C8%99oaia_02.jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/3/34/Ansamblul_Mogo%C8%99oaia_02.jpg" data-cache="d22g1" alt="De loggia met gedraaide zuilen" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>De loggia met gedraaide zuilen</figcaption></figure></div>
+  </section>
 
 <!-- ================= DAG 23 ================= -->
 <section class="day" id="d23">
@@ -1022,7 +1056,9 @@ body{
       </ul>
     </div>
   </div>
-</section>
+
+    <div class="gallery"><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Palace_of_the_Parliament-balcony-20040801.JPG/500px-Palace_of_the_Parliament-balcony-20040801.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/0/0a/Palace_of_the_Parliament-balcony-20040801.JPG" data-cache="d23g0" alt="Uitzicht vanaf het balkon" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Uitzicht vanaf het balkon</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Romanian_Athenaeum_-_Ateneul_Rom%C3%A2n.JPG/500px-Romanian_Athenaeum_-_Ateneul_Rom%C3%A2n.JPG" data-orig="https://upload.wikimedia.org/wikipedia/commons/1/1d/Romanian_Athenaeum_-_Ateneul_Rom%C3%A2n.JPG" data-cache="d23g1" alt="Het Roemeens Athenaeum" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Het Roemeens Athenaeum</figcaption></figure><figure class="gitem"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/The_Stavropoleos_Church_and_Monastery_from_downtown_Bucharest_(Romania).jpg/500px-The_Stavropoleos_Church_and_Monastery_from_downtown_Bucharest_(Romania).jpg" data-orig="https://upload.wikimedia.org/wikipedia/commons/9/99/The_Stavropoleos_Church_and_Monastery_from_downtown_Bucharest_(Romania).jpg" data-cache="d23g2" alt="Het Stavropoleos-klooster" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.dataset.orig;}else{var c=this.closest('.gitem');if(c)c.remove();}"><figcaption>Het Stavropoleos-klooster</figcaption></figure></div>
+  </section>
 
 <!-- ================= DAG 24 ================= -->
 <section class="day" id="d24">
@@ -1132,26 +1168,40 @@ body{
   <p>Roemenië · juni 2026 · foto-editie, bijgewerkt 12 juni</p>
 </footer>
 
-
-
-
 <script>
 (function(){
- var CACHE='reisgids-v1';
+ var CACHE='reisgids-v3';
  var chip=document.getElementById('cachechip');
+ var imgs=document.querySelectorAll('img[data-cache]');
+ var TOTAL=imgs.length;
  if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('./sw.js').catch(function(){});
+  navigator.serviceWorker.register('./sw.js').then(function(reg){
+   reg.addEventListener('updatefound',function(){
+    var sw=reg.installing;
+    if(!sw)return;
+    sw.addEventListener('statechange',function(){
+     if(sw.state==='installed' && navigator.serviceWorker.controller){
+      // nieuwe versie klaar: meteen activeren en eenmaal verversen
+      sw.postMessage('skipWaiting');
+     }
+    });
+   });
+  }).catch(function(){});
+  var refreshed=false;
+  navigator.serviceWorker.addEventListener('controllerchange',function(){
+   if(refreshed)return; refreshed=true; window.location.reload();
+  });
  }else if(chip){chip.textContent='Offline-opslag wordt door deze browser niet ondersteund.';return;}
  function upd(){
   if(!('caches' in window)||!chip)return;
   caches.open(CACHE).then(function(c){return c.keys();}).then(function(keys){
    var n=keys.filter(function(r){return r.url.indexOf('upload.wikimedia.org')>-1;}).length;
-   var ok=keys.some(function(r){return r.url.indexOf('index.html')>-1||/\/$/.test(r.url);});
-   chip.textContent=(ok?'Gids offline opgeslagen. ':'Bezig met opslaan... ')+'Foto\u2019s: '+n+' van 23.';
+   if(n>TOTAL)n=TOTAL;
+   chip.textContent='Foto\u2019s offline opgeslagen: '+n+' van '+TOTAL+'.';
   }).catch(function(){});
  }
  upd();
- var t=0,iv=setInterval(function(){upd();if(++t>10)clearInterval(iv);},3000);
+ var t=0,iv=setInterval(function(){upd();if(++t>20)clearInterval(iv);},3000);
 })();
 </script>
 </body>
