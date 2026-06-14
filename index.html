@@ -1358,14 +1358,26 @@ figure.photo img,figure.gitem img{cursor:zoom-in}
     <ul class="checklist" id="checklist">
       <li><label><input type="checkbox" data-ck="klm"><span class="box"></span><span><span class="ck-main">KLM bellen voor schriftelijke bevestiging van het retour</span><span class="ck-when">16 tot 18 juni, rustig moment</span></span></label></li>
       <li><label><input type="checkbox" data-ck="parlement"><span class="box"></span><span><span class="ck-main">Tickets Parlementspaleis online reserveren</span><span class="ck-when">deze week, voor 23 juni</span></span></label></li>
-      <li><label><input type="checkbox" data-ck="horezu"><span class="box"></span><span><span class="ck-main">Hotel in Horezu boeken</span><span class="ck-when">klein aanbod, voor 19 juni</span></span></label></li>
+      <li><label><input type="checkbox" data-ck="horezu"><span class="box"></span><span><span class="ck-main">Resterende hotels boeken: Sibiu, Curtea de Argeș, Boekarest</span><span class="ck-when">Sibiu en Curtea elk 2 nachten &middot; zie Overnachtingen</span></span></label></li>
       <li><label><input type="checkbox" data-ck="transalpina"><span class="box"></span><span><span class="ck-main">Status Transalpina checken</span><span class="ck-when">avond 18 juni, Facebook DRDP Craiova</span></span></label></li>
       <li><label><input type="checkbox" data-ck="transfagarasan"><span class="box"></span><span><span class="ck-main">Status Transfăgărășan en de Vidraru-afsluiting checken</span><span class="ck-when">avond 20 juni, Facebook CNAIR</span></span></label></li>
       <li><label><input type="checkbox" data-ck="paspoort"><span class="box"></span><span><span class="ck-main">Paspoort klaarleggen voor het Parlementspaleis</span><span class="ck-when">ochtend 23 juni</span></span></label></li>
       <li><label><input type="checkbox" data-ck="bevestiging"><span class="box"></span><span><span class="ck-main">Schriftelijke KLM-bevestiging offline opslaan</span><span class="ck-when">voor de incheck op 24 juni</span></span></label></li>
       <li><label><input type="checkbox" data-ck="tanken"><span class="box"></span><span><span class="ck-main">Huurauto vol tanken vóór inleveren op OTP</span><span class="ck-when">avond 23 of ochtend 24 juni</span></span></label></li>
     </ul>
-    <p id="ckcount"></p>
+    <p id="ckcount" data-ckcount></p>
+
+    <h3>Overnachtingen</h3>
+    <p>Eén regel per plaats waar je slaapt, met de status. Vink een plek af zodra de boeking rond is. De drie geboekte plekken kun je meteen aanvinken.</p>
+    <ul class="checklist" id="acclist">
+      <li><label><input type="checkbox" data-ck="acc-cluj"><span class="box"></span><span><span class="ck-main">Cluj-Napoca &middot; Hotel Paradis</span><span class="ck-when">15-16 juni &middot; 1 nacht &middot; geboekt &middot; Strada Ciocârliei 47, 400619</span></span></label></li>
+      <li><label><input type="checkbox" data-ck="acc-rosia"><span class="box"></span><span><span class="ck-main">Roșia Montană &middot; Lake House (Little House)</span><span class="ck-when">16-17 juni &middot; 1 nacht &middot; geboekt &middot; nr. 331A, Alba, 517615</span></span></label></li>
+      <li><label><input type="checkbox" data-ck="acc-sibiu"><span class="box"></span><span><span class="ck-main">Sibiu &middot; nog te boeken</span><span class="ck-when">17-19 juni &middot; 2 nachten &middot; nog te boeken</span></span></label></li>
+      <li><label><input type="checkbox" data-ck="acc-poenari"><span class="box"></span><span><span class="ck-main">Poenari, Gorj &middot; Pensiune la Maria lu' Sandoiu</span><span class="ck-when">19-20 juni &middot; 1 nacht &middot; geboekt &middot; Bumbești Deal 250, 217110</span></span></label></li>
+      <li><label><input type="checkbox" data-ck="acc-arges"><span class="box"></span><span><span class="ck-main">Curtea de Argeș &middot; nog te boeken</span><span class="ck-when">20-22 juni &middot; 2 nachten &middot; nog te boeken</span></span></label></li>
+      <li><label><input type="checkbox" data-ck="acc-boekarest"><span class="box"></span><span><span class="ck-main">Boekarest &middot; nog te boeken</span><span class="ck-when">22-24 juni &middot; 2 nachten &middot; nog te boeken</span></span></label></li>
+    </ul>
+    <p data-ckcount></p>
 
 
     <h3>Wegen en tijden, stand 12 juni 2026</h3>
@@ -1388,9 +1400,9 @@ figure.photo img,figure.gitem img{cursor:zoom-in}
 
     <h3>Boekvolgorde, voor zover nog open</h3>
     <ul>
-      <li>1. Horezu (19 juni): klein aanbod, dit eerst.</li>
-      <li>2. Parlementspaleis: tijdslot voor 23 juni reserveren, paspoortnummer bij de hand.</li>
-      <li>3. Daarna: Cluj (15), Alba Iulia (16), Sibiu (17-18), Curtea de Argeș (20-21), Boekarest (22-23).</li>
+      <li>Geboekt: Cluj (15 juni, Hotel Paradis), Roșia Montană (16 juni, Lake House), Poenari (19 juni, Pensiune la Maria lu' Sandoiu).</li>
+      <li>Nog te boeken: Sibiu (17-18 juni, 2 nachten), Curtea de Argeș (20-21 juni, 2 nachten), Boekarest (22-23 juni, 2 nachten).</li>
+      <li>Parlementspaleis: tijdslot voor 23 juni reserveren, paspoortnummer bij de hand.</li>
     </ul>
 
     <h3>Beren</h3>
@@ -1606,27 +1618,31 @@ figure.photo img,figure.gitem img{cursor:zoom-in}
 
  // Afvinklijst met opslag op dit toestel
  (function(){
-  var boxes=[].slice.call(document.querySelectorAll('#checklist input[data-ck]'));
-  if(!boxes.length)return;
   var P='reisgids-check-';
-  var counter=document.getElementById('ckcount');
-  function refresh(){
-   var n=0;
+  var lists=[].slice.call(document.querySelectorAll('ul.checklist'));
+  lists.forEach(function(ul){
+   var boxes=[].slice.call(ul.querySelectorAll('input[data-ck]'));
+   if(!boxes.length)return;
+   var counter=ul.nextElementSibling;
+   while(counter && !(counter.hasAttribute && counter.hasAttribute('data-ckcount'))) counter=counter.nextElementSibling;
+   function refresh(){
+    var n=0;
+    boxes.forEach(function(b){
+     var li=b.closest('li');
+     if(b.checked){n++;li.classList.add('done');}else{li.classList.remove('done');}
+    });
+    if(counter)counter.textContent=n+' van '+boxes.length+' afgevinkt';
+   }
    boxes.forEach(function(b){
-    var li=b.closest('li');
-    if(b.checked){n++;li.classList.add('done');}else{li.classList.remove('done');}
+    var key=P+b.getAttribute('data-ck');
+    try{if(localStorage.getItem(key)==='1')b.checked=true;}catch(e){}
+    b.addEventListener('change',function(){
+     try{localStorage.setItem(key,b.checked?'1':'0');}catch(e){}
+     refresh();
+    });
    });
-   if(counter)counter.textContent=n+' van '+boxes.length+' afgevinkt';
-  }
-  boxes.forEach(function(b){
-   var key=P+b.getAttribute('data-ck');
-   try{if(localStorage.getItem(key)==='1')b.checked=true;}catch(e){}
-   b.addEventListener('change',function(){
-    try{localStorage.setItem(key,b.checked?'1':'0');}catch(e){}
-    refresh();
-   });
+   refresh();
   });
-  refresh();
  })();
 
 })();
