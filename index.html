@@ -256,9 +256,48 @@ body{
   .gallery{grid-template-columns:repeat(3,1fr)}
   .gitem img{height:175px}
 }
+
+/* ---------- leeshulp en lightbox ---------- */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:70;transition:width .12s ease-out}
+#toTop{position:fixed;right:15px;bottom:15px;width:46px;height:46px;border-radius:50%;
+ background:var(--fir);color:var(--paper);border:1px solid var(--gold);box-shadow:0 3px 12px rgba(20,30,22,.32);
+ z-index:70;display:none;align-items:center;justify-content:center;cursor:pointer;font-size:19px;line-height:1}
+#toTop:active{transform:scale(.94)}
+#resumeToast{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;max-width:90%;
+ background:var(--fir);color:#EAEee3;z-index:71;display:none;align-items:center;gap:14px;
+ padding:11px 14px;border:1px solid var(--gold-soft);box-shadow:0 4px 16px rgba(20,30,22,.35);
+ font-family:var(--sans);font-size:13.5px;letter-spacing:.01em}
+#resumeToast b{color:var(--gold-soft);font-weight:600}
+#resumeToast .rt-go{color:#fff;text-decoration:underline;cursor:pointer;white-space:nowrap}
+#resumeToast .rt-x{color:#9fb0a1;cursor:pointer;font-size:17px;line-height:1;padding-left:2px}
+.today-badge{display:inline-block;font-family:var(--sans);font-size:10.5px;letter-spacing:.18em;
+ text-transform:uppercase;color:var(--fir);background:var(--gold-soft);padding:3px 9px;border-radius:2px;
+ font-weight:700;margin-bottom:8px}
+.day-head.is-today{position:relative}
+#lb{position:fixed;inset:0;background:rgba(18,24,18,.93);z-index:80;display:none;
+ align-items:center;justify-content:center;flex-direction:column;padding:18px;cursor:zoom-out}
+#lb img{max-width:95%;max-height:84%;object-fit:contain;border:1px solid rgba(255,255,255,.15)}
+#lb .lb-cap{color:#e6e9e0;font-family:var(--sans);font-size:12.5px;letter-spacing:.02em;margin-top:12px;text-align:center;max-width:90%}
+#lb .lb-x{position:absolute;top:14px;right:18px;color:#fff;font-size:30px;line-height:1;cursor:pointer;opacity:.85}
+figure.photo img,figure.gitem img{cursor:zoom-in}
+@media print{#progress,#toTop,#resumeToast,#lb{display:none !important}}
 </style>
 </head>
 <body>
+
+<div id="progress" aria-hidden="true"></div>
+<button id="toTop" aria-label="Terug naar de inhoud">&#8593;</button>
+<div id="resumeToast" role="status">
+  <span id="rt-text"></span>
+  <span class="rt-go" id="rt-go">openen</span>
+  <span class="rt-x" id="rt-x" aria-label="sluiten">&times;</span>
+</div>
+<div id="lb" role="dialog" aria-label="Foto vergroot">
+  <span class="lb-x" aria-hidden="true">&times;</span>
+  <img id="lb-img" alt="">
+  <div class="lb-cap" id="lb-cap"></div>
+</div>
+
 
 <!-- ================= COVER ================= -->
 <header class="cover">
@@ -308,7 +347,7 @@ body{
 </section>
 
 <!-- ================= INHOUD ================= -->
-<nav class="toc">
+<nav class="toc" id="inhoud">
   <div class="wrap">
     <span class="eyebrow">Vooraf</span>
     <ol>
@@ -1374,5 +1413,129 @@ body{
  var t=0,iv=setInterval(function(){upd();if(++t>20)clearInterval(iv);},3000);
 })();
 </script>
+<script>
+(function(){
+ if('scrollRestoration' in history){history.scrollRestoration='manual';}
+ var KEY='reisgids-pos';
+ var sections=[].slice.call(document.querySelectorAll('section[id]'));
+ var doc=document.documentElement;
+ var userScrolled=false, lastSave=0;
+
+ function maxScroll(){return Math.max(1,(doc.scrollHeight-window.innerHeight));}
+ function curSection(){
+  var best=null;
+  for(var i=0;i<sections.length;i++){
+   var r=sections[i].getBoundingClientRect();
+   if(r.top<=90) best=sections[i]; else break;
+  }
+  return best;
+ }
+ function labelFor(sec){
+  var h=sec.querySelector('h2'); return h?h.textContent.trim():sec.id;
+ }
+
+ // Voortgangsbalk + knop
+ var bar=document.getElementById('progress');
+ var toTop=document.getElementById('toTop');
+ function onScroll(){
+  var y=window.pageYOffset||doc.scrollTop;
+  bar.style.width=(y/maxScroll()*100)+'%';
+  toTop.style.display=(y>600)?'flex':'none';
+  if(performance.now()-lastSave>400){
+   lastSave=performance.now();
+   var sec=curSection();
+   if(sec){try{localStorage.setItem(KEY,JSON.stringify({id:sec.id,y:Math.round(y),t:Date.now()}));}catch(e){}}
+  }
+ }
+ var ticking=false;
+ window.addEventListener('scroll',function(){
+  userScrolled=true;
+  if(!ticking){window.requestAnimationFrame(function(){onScroll();ticking=false;});ticking=true;}
+ },{passive:true});
+
+ toTop.addEventListener('click',function(){
+  var n=document.getElementById('inhoud');
+  if(n)n.scrollIntoView({behavior:'smooth'}); else window.scrollTo({top:0,behavior:'smooth'});
+ });
+
+ // Toast
+ var toast=document.getElementById('resumeToast');
+ var rtText=document.getElementById('rt-text');
+ var rtGo=document.getElementById('rt-go');
+ var rtX=document.getElementById('rt-x');
+ var goTarget=null;
+ function showToast(html,target,golabel){
+  rtText.innerHTML=html; goTarget=target; rtGo.textContent=golabel||'openen';
+  toast.style.display='flex';
+ }
+ function hideToast(){toast.style.display='none';}
+ rtX.addEventListener('click',hideToast);
+ rtGo.addEventListener('click',function(){
+  if(goTarget){goTarget.scrollIntoView();userScrolled=true;}
+  hideToast();
+ });
+ setTimeout(function(){if(toast.style.display==='flex')hideToast();},9000);
+
+ // 'Vandaag' bepalen (alleen tijdens de reis in juni 2026)
+ function todaySection(){
+  var d=new Date();
+  if(d.getFullYear()!==2026||d.getMonth()!==5)return null;
+  var day=d.getDate();
+  if(day<7||day>24)return null;
+  return document.getElementById('d'+(day<10?'0'+day:''+day));
+ }
+ var ts=todaySection();
+ if(ts){
+  var head=ts.querySelector('.day-head');
+  if(head && !head.querySelector('.today-badge')){
+   head.classList.add('is-today');
+   var b=document.createElement('span'); b.className='today-badge'; b.textContent='Vandaag';
+   head.insertBefore(b, head.firstChild);
+  }
+ }
+
+ // Herstel laatste positie, tenzij er een anker in de URL staat
+ function restore(){
+  if(location.hash && document.querySelector(location.hash))return;
+  var raw; try{raw=localStorage.getItem(KEY);}catch(e){raw=null;}
+  var saved=null; if(raw){try{saved=JSON.parse(raw);}catch(e){}}
+  var fresh = saved && (Date.now()-saved.t < 1000*60*60*24*45); // 45 dagen
+  if(fresh && saved.id){
+   var el=document.getElementById(saved.id);
+   if(el && saved.y>window.innerHeight*0.6){
+    var jump=function(){ if(!userScrolled) el.scrollIntoView(); };
+    jump(); setTimeout(jump,250); setTimeout(jump,900);
+    showToast('Hervat bij <b>'+labelFor(el)+'</b>', null, '');
+    rtGo.style.display='none';
+    return;
+   }
+  }
+  if(ts){ // geen opgeslagen plek: bied de dag van vandaag aan
+   showToast('Vandaag is <b>'+labelFor(ts)+'</b>', ts, 'naar vandaag');
+   rtGo.style.display='inline';
+  }
+ }
+ window.addEventListener('load',function(){ setTimeout(restore,60); onScroll(); });
+
+ // Lightbox: tik op een foto om hem groot te zien
+ var lb=document.getElementById('lb');
+ var lbImg=document.getElementById('lb-img');
+ var lbCap=document.getElementById('lb-cap');
+ function openLB(img){
+  lbImg.src=img.currentSrc||img.src;
+  var fc=img.parentNode.querySelector('figcaption');
+  lbCap.textContent=fc?fc.textContent.replace(/\s*·\s*Wikimedia Commons\s*$/,''):'';
+  lb.style.display='flex';
+ }
+ function closeLB(){lb.style.display='none';lbImg.removeAttribute('src');}
+ document.addEventListener('click',function(e){
+  var img=e.target.closest && e.target.closest('figure.photo img, figure.gitem img');
+  if(img){openLB(img);}
+ });
+ lb.addEventListener('click',closeLB);
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLB();});
+})();
+</script>
+
 </body>
 </html>
